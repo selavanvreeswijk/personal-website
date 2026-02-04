@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{ 
+    font-family:'GT America';
+    src: url('../fonts/GTAmerica-CondensedBlack.woff2') format('TrueType');
+}
+
+/* -------------------------------------------- header -------------------------------------------*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 98vh;
+}
+
+/* header p{ dit is die open archive 'knop'
+    margin-top: 10em;
+} */
+
+/* -------------------------------------------- main -------------------------------------------*/
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.folder-1{
+    background-color: hotpink;
+    width: 95vw;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.folder-2{
+    background-color: orange;
+    width: 95vw;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.folder-3{
+    background-color: green;
+    width: 95vw;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+article section{
+    position: absolute;
+    top: -2.2rem;
+    left: 2rem;
+
+    padding: 0.6rem 1.4rem;
+    font-weight: bold;
+
+    border-radius: 12px 12px 0 0;
+}
+
