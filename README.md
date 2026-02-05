@@ -1,4 +1,4 @@
-# personal-website
+# ReadMe
 
 TEMPLATE
 #### Wat heb ik vandaag gedaan?
