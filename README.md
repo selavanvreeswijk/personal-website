@@ -1,5 +1,10 @@
 # ReadMe
 
+Leerdoelen:
+- Websites met attention to detail. Zowel vormgeving en interactie
+- Toffe animaties coderen + met SVG spelen
+- JavaScript beter begrijpen
+
 TEMPLATE
 #### Wat heb ik vandaag gedaan?
 #### Hoe lang duurde het?
