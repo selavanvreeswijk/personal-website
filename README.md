@@ -32,5 +32,10 @@ Vandaag ben ik wederom begonnen met een workshop, deze keer over Theming in CSS.
 ### Vrijdag 
 Toen ik 9:30 binnen kwam lopen, ben ik direct aan de slag gegaan met de laatste dingen voor mjin website finetunen. Ik heb de padding overal hetzelfde gemaakt zodat het er leesbaar uitziet, mijn website aan de API gekoppeld en ben begonnen met de styling van mijn folders. Hierna hadden we de markt en vond ik het super interessant om ieders werk te kunnen bekijken, het was inspirerend. Als afsluiter hadden we een quiz waar ik van genoot, wat over mijn klasgenoten geleerd. Daarna heb ik nog een plan gemaakt voor wat ik volgende week wil gaan doen, want ik merkte dat ik na mijn folders niet meer zo goed wist wat ik wilde en wat ik nu als extra wil gaan doen. Het geeft me rust dit voor het weekend te weten en dan maandagochtend lekker aan de slag te gaan met deze ideeën voor mijn ontwerp. 
 
+<img alt="Screenshot 2026-02-06 at 16 13 08" src="https://github.com/user-attachments/assets/b5d2bfee-1050-4ce5-8f36-2eb11485d56e" />
+
+<img alt="Screenshot 2026-02-06 at 16 12 58" src="https://github.com/user-attachments/assets/2b8315f3-7131-42ca-b61b-a212c79d4c39" />
+
+
 ### Week verslag 
 Ik vond deze eerste week heel leuk. Ik heb vooral veel herhaling gehad, maar ook nieuwe dingen in CSS en JavaScript wat interessant was om te leren. Ik vind de opdracht leuk en ook leuk om er op studie zo aan te zitten en het verder thuis te laten. Ik kijk naar de rest van deze minor uit. 
