@@ -14,6 +14,26 @@
     src: url('../fonts/arnhem-bold.otf') format('truetype');
 }
 
+@font-face{ 
+    font-family:'Amsterdam';
+    src: url('../fonts/amsterdam.ttf') format('truetype');
+}
+
+@font-face{ 
+    font-family:'Whispering';
+    src: url('../fonts/whispering.ttf') format('truetype');
+}
+
+@font-face{ 
+    font-family:'Modernline';
+    src: url('../fonts/modernline.otf') format('truetype');
+}
+
+@font-face{ 
+    font-family:'Signatie';
+    src: url('../fonts/signatie.otf') format('truetype');
+}
+
 h1{
     font-family: 'Arnhem Bold', sans-serif; 
     /* text-transform: uppercase; */
@@ -28,10 +48,20 @@ h2{
     color: white;
 }
 
+h3{
+    font-family: 'Modernline', sans-serif;
+    /* letter-spacing: 0.2em; */
+    font-size: 3em;
+}
+
 html{
     /* background-color: #6a6556; */
     /* background-color: #8a846f; */
     background-color: #777162;
+}
+
+ul{
+  list-style-type: '- ';
 }
 
 /* -------------------------------------------- HEADER -------------------------------------------*/
@@ -42,17 +72,27 @@ header{
     align-items: center;
     justify-content: center;
 
-    height: 95vh;
+    height: 94vh;
 }
-
-/* header p{ dit is die open archive 'knop'
-    margin-top: 10em;
-} */
 
 /* -------------------------------------------- MAIN -------------------------------------------*/
 
-main{
-    min-height: 150vh;
+/* ----------- TITELS BOVENIN ----------*/
+
+.statisch{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    color: #3f3e2c;
+
+    padding: 0.2em;
+    top: 0.5em;
+    width: 100%;
+}
+
+.statisch h4:nth-of-type(1){
+    text-transform: uppercase;
 }
 
 .container{
@@ -66,17 +106,17 @@ main{
 
 article{
     position: relative;
-    transition: transform 1.5s ease;
+    transition: transform 2s ease;
 }
 
 /* folder dicht */
 
-article section{
+article section{ /* ----- alle folders -----*/
     width: 95vw;
     margin-bottom: 2em;
-    padding: 1.5em;
+    padding: 0.5em 1em;
 
-    max-height: 140px;
+    /* max-height: 140px; */
     overflow: hidden;
 }
 
@@ -90,15 +130,17 @@ article.active{
     z-index: 10;
 }
 
-.folder-2.active{
-    transform: translateY(-194.5px);
+/* Folders schuiven omhoog */
+
+.folder-2.active{ 
+    transform: translateY(-259.9px);
 }
 
 .folder-3.active{
-    transform: translateY(-389.5px);
+    transform: translateY(-848px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
 
     .folder-2.active{
         transform: translateY(-195px);
@@ -117,7 +159,7 @@ article.active{
     z-index: 1;
 }
 
-.folder-1 p{
+.folder-1 p{ /* ----- tabje -----*/
     background-color: #969080;
     color: #3f3e2c;
     text-transform: uppercase;
@@ -131,9 +173,13 @@ article.active{
     box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 }
 
-.folder-1 section{
+.folder-1 section{ /* ----- folder -----*/
     background-color: #969080;
     color: #3f3e2c;
+    border-radius: 0 6px 6px 6px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+
+    padding: 1em 2em;
 }
 
 /* .folder-1 section h3{
@@ -147,24 +193,19 @@ article.active{
     z-index: 2;
 }
 
-.folder-2 p{
+.folder-2 p{ /* ----- tabje -----*/
     margin-left: 5.15em;
     background-color: #211e15;
     text-transform: uppercase;
     color: #dbd2b7;
-    width: 55vw;
-    max-width: 200px;
+    width: 30vw;
+    max-width: 100px;
 
     padding: 0.6em 1em;
     font-weight: bold;
 
     border-radius: 12px 12px 0 0;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-}
-
-.folder-2 section{
-    background-color: #211e15;
-    color: #dbd2b7;
 }
 
 @media (max-width: 768px) {
@@ -177,6 +218,33 @@ article.active{
     }
 }
 
+.folder-2 section{ /* ----- folder -----*/
+    background-color: #211e15;
+    color: #dbd2b7;
+
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+
+    padding: 1em 2em;
+}
+
+.folder-2 ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 100px;  
+    column-gap: 200px;
+    margin: 4em 9em;
+}
+
+.folder-2 li{
+    list-style: none;
+    justify-self: start;
+}
+
+.folder-2 li:nth-child(even){
+  justify-self: end;
+}
+
 /* .folder-2 section h3{
     margin-bottom: 0.5em;
 } */
@@ -184,17 +252,18 @@ article.active{
 /* ----------------- FOLDER 3 -----------------*/
 
 .folder-3{
-    z-index: 11;
     position: relative;
+    z-index: 11;
+    overflow: hidden;
 }
 
-.folder-3 p{
-    margin-left: 17.74em;
+.folder-3 p{ /* ----- tabje -----*/
+    margin-left: 11.5em;
     background-color: #c1b6a4;
     text-transform: uppercase;
     color: #1b150b;
-    width: 30vw;
-    max-width: 100px;
+    width: 55vw;
+    max-width: 200px;
 
     padding: 0.6em 1em;
     font-weight: bold;
@@ -210,11 +279,22 @@ article.active{
     }
 }
 
-.folder-3 section{
+.folder-3 section{ /* ----- folder -----*/
     background-color: #c1b6a4;
     color: #1b150b;
+    position: relative;
+
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+
+    height: 550px;
+
+    padding: 1em 2em;
 }
 
 /* .folder-3 section h3{
     margin-bottom: 0.5em;
 } */
+
+
+

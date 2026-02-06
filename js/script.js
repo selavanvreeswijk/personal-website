@@ -1,53 +1,61 @@
 const folders = document.querySelectorAll("article");
-let list = document.querySelector("ul")
+const list = document.querySelector(".folder-1 section ul");
+const mijnNaam = document.querySelector("header");
+const randomLijst = document.querySelector('.folder-2 ul');
 
-window.addEventListener("scroll", () => { // Scrollen voor folders
+// Folders scrollen
+
+window.addEventListener("scroll", () => { 
     const scroll = window.pageYOffset;
 
     folders.forEach(folder => {
         folder.classList.remove("active");
     });
 
-    if (scroll > 225) {
+    if (scroll > 300) {
         folders[1].classList.add("active");
-    }
+    };
 
-    if (scroll > 325) {
+    if (scroll > 640) {
         folders[2].classList.add("active");
-    }
+    };
 });
 
-insertCharacters() // API info ophalen
+// API
 
-async function insertCharacters() {
-    const url = 'https://fdnd.directus.app/items/person/321'
+insertCharacter() 
 
-    const response = await fetch(url)
-    const result = await response.json()
+async function insertCharacter() {
+    const url = 'https://fdnd.directus.app/items/person/321';
 
-    console.log('API result:', result)
+    const response = await fetch(url);
+    const result = await response.json();
+
+    const person = result.data;
+
+    // <li>Bio: ${person.bio}</li>
+
+        let titelNaam =`
+            <h1>${person.name}</h1>
+        `
+
+       let mijnData = `
+            <li>Nickname: ${person.nickname}</li>
+            <li>Github Handle: ${person.github_handle}</li>
+            <li>Website: ${person.website}</li>
+        `
+
+    mijnNaam.insertAdjacentHTML("afterbegin", titelNaam);
+    list.insertAdjacentHTML("beforeend", mijnData);
 }
 
-async function insertCharacters() {
-    const baseURL = 'https://fdnd.directus.app/'
-    const endpoint = 'items/person/321'
-    
-    const url = baseURL + endpoint
+// Random lijst folder 2 
 
-    const response = await fetch(url)
-    const result = await response.json()
-
-    const person = result.data
-
-    let charactersHTML = `
-        <li>Name: ${person.name}</li>
-        <li>Nickname: ${person.nickname}</li>
-        <li>Githubhandle: ${person.github_handle}</li>
-        <li>Website: ${person.website}</li>
-        <li>Bio: ${person.bio}</li>
-    `
-
-    list.insertAdjacentHTML("beforeend", charactersHTML)
+for (let i = randomLijst.children.length; i >= 0; i--) {
+    randomLijst.appendChild(randomLijst.children[Math.random() * i | 0]);
 }
+
+
+
 
 
