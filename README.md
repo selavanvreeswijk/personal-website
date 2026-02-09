@@ -39,3 +39,10 @@ Toen ik 9:30 binnen kwam lopen, ben ik direct aan de slag gegaan met de laatste 
 
 ### Week verslag 
 Ik vond deze eerste week heel leuk. Ik ben een jaar niet bezig geweest met code, en ik merkte dat ik het heb gemist. Het was voor mij veel herhaling en vragen als "Hoe ging dat ook alweer?". Daarnaast, heb ik ook nieuwe dingen in CSS en JavaScript geleerd wat interessant was. Ik vind de opdracht leuk en ook leuk om er op studie zo aan te zitten en het verder thuis te laten. Het is wel even wennen qua nieuwe routine met elke dag (lang) les en dus thuis er niet aan zitten, maar dat komt met de tijd. Ik kijk naar de rest van deze minor uit en ben benieuwd wat voor een websites ik ga maken. 
+
+<details><summary>Week 2</summary>
+
+## Week 2
+
+### Maandag
+Vandaag heb ik de hele dag aan mijn website gewerkt. Ik heb een juist font gezocht voor mijn kopjes en tekst, mijn nieuwe ontwerpen ingeladen qua HTML & CSS en ik ben bezig gegaan met die styling. Hier ben ik allemaal dus vrijwel de hele dag mee bezig geweest. Ik heb geleerd over een horizontale scrollbar met afbeeldingen, meer over scroll animaties en dat er super veel lelijke fonts zijn... Aan het einde van de dag was ik best moe en ben ik afbeeldingen gaan uitzoeken voor mijn horizontale scroll. Ik heb ook kleuren en fonts in de root gezet, en een begin gemaakt aan een ander thema. Morgen ga ik aan de slag met de styling finaal maken, mijn code controleren, de website responsive maken, mijn klasgenoten toevoegen en meer animaties toevoegen.
