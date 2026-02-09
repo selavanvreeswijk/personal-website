@@ -1,4 +1,4 @@
-# ReadMe
+<img width="1512" height="774" alt="Screenshot 2026-02-09 at 16 31 44" src="https://github.com/user-attachments/assets/bfe99603-5c10-4c2a-8574-00558c276a91" /># ReadMe
 
 Leerdoelen:
 - Websites met attention to detail. Zowel vormgeving en interactie
@@ -46,3 +46,10 @@ Ik vond deze eerste week heel leuk. Ik ben een jaar niet bezig geweest met code,
 
 ### Maandag
 Vandaag heb ik de hele dag aan mijn website gewerkt. Ik heb een juist font gezocht voor mijn kopjes en tekst, mijn nieuwe ontwerpen ingeladen qua HTML & CSS en ik ben bezig gegaan met die styling. Hier ben ik allemaal dus vrijwel de hele dag mee bezig geweest. Ik heb geleerd over een horizontale scrollbar met afbeeldingen, meer over scroll animaties en dat er super veel lelijke fonts zijn... Aan het einde van de dag was ik best moe en ben ik afbeeldingen gaan uitzoeken voor mijn horizontale scroll. Ik heb ook kleuren en fonts in de root gezet, en een begin gemaakt aan een ander thema. Morgen ga ik aan de slag met de styling finaal maken, mijn code controleren, de website responsive maken, mijn klasgenoten toevoegen en meer animaties toevoegen.
+
+<img alt="Screenshot 2026-02-09 at 16 31 18" src="https://github.com/user-attachments/assets/4c365779-a4b2-4651-8f07-6e123bb4de47" />
+<img alt="Screenshot 2026-02-09 at 16 31 44" src="https://github.com/user-attachments/assets/be07270f-4f44-4773-ade6-4eb23e3f87e0" />
+<img alt="Screenshot 2026-02-09 at 16 32 01" src="https://github.com/user-attachments/assets/8f00b6ad-efde-4e5c-894a-c85d73836bb0" />
+
+
+
