@@ -1,4 +1,3 @@
-<img width="1512" height="774" alt="Screenshot 2026-02-09 at 16 31 44" src="https://github.com/user-attachments/assets/bfe99603-5c10-4c2a-8574-00558c276a91" /># ReadMe
 
 Leerdoelen:
 - Websites met attention to detail. Zowel vormgeving en interactie
