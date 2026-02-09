@@ -38,4 +38,4 @@ Toen ik 9:30 binnen kwam lopen, ben ik direct aan de slag gegaan met de laatste 
 
 
 ### Week verslag 
-Ik vond deze eerste week heel leuk. Ik heb vooral veel herhaling gehad, maar ook nieuwe dingen in CSS en JavaScript wat interessant was om te leren. Ik vind de opdracht leuk en ook leuk om er op studie zo aan te zitten en het verder thuis te laten. Ik kijk naar de rest van deze minor uit. 
+Ik vond deze eerste week heel leuk. Ik ben een jaar niet bezig geweest met code, en ik merkte dat ik het heb gemist. Het was voor mij veel herhaling en vragen als "Hoe ging dat ook alweer?". Daarnaast, heb ik ook nieuwe dingen in CSS en JavaScript geleerd wat interessant was. Ik vind de opdracht leuk en ook leuk om er op studie zo aan te zitten en het verder thuis te laten. Het is wel even wennen qua nieuwe routine met elke dag (lang) les en dus thuis er niet aan zitten, maar dat komt met de tijd. Ik kijk naar de rest van deze minor uit en ben benieuwd wat voor een websites ik ga maken. 
