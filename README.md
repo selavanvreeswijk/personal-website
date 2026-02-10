@@ -39,6 +39,8 @@ Toen ik 9:30 binnen kwam lopen, ben ik direct aan de slag gegaan met de laatste 
 ### Week verslag 
 Ik vond deze eerste week heel leuk. Ik ben een jaar niet bezig geweest met code, en ik merkte dat ik het heb gemist. Het was voor mij veel herhaling en vragen als "Hoe ging dat ook alweer?". Daarnaast, heb ik ook nieuwe dingen in CSS en JavaScript geleerd wat interessant was. Ik vind de opdracht leuk en ook leuk om er op studie zo aan te zitten en het verder thuis te laten. Het is wel even wennen qua nieuwe routine met elke dag (lang) les en dus thuis er niet aan zitten, maar dat komt met de tijd. Ik kijk naar de rest van deze minor uit en ben benieuwd wat voor een websites ik ga maken. 
 
+</details>
+
 <details><summary>Week 2</summary>
 
 ## Week 2
@@ -49,6 +51,18 @@ Vandaag heb ik de hele dag aan mijn website gewerkt. Ik heb een juist font gezoc
 <img alt="Screenshot 2026-02-09 at 16 31 18" src="https://github.com/user-attachments/assets/4c365779-a4b2-4651-8f07-6e123bb4de47" />
 <img alt="Screenshot 2026-02-09 at 16 31 44" src="https://github.com/user-attachments/assets/be07270f-4f44-4773-ade6-4eb23e3f87e0" />
 <img alt="Screenshot 2026-02-09 at 16 32 01" src="https://github.com/user-attachments/assets/8f00b6ad-efde-4e5c-894a-c85d73836bb0" />
+
+### Dinsdag
+
+Ik heb mijn afbeeldingen verder uitgezocht en ben begonnen aan een animatie voor mijn naam wanneer je op de website komt. Ik heb een zogenaamde glitch reveal en typewriter effect geprobeerd maar dit lukte niet, dus heb ik na een uur dat gelaten en ben ik mijn website responsive gaan maken. Daar ben ik uiteindelijk 2,5 uur mee bezig geweest en het is nog niet eens gelukt... Hier ga ik morgen verder mee aan de slag, evenals mijn minorgenoten toevoegen en het extra thema finetunen. Ik wil ook nog heel graag een animatie met mijn tekst maar ik zie dit als iets extra's, eerst dit begin. Ik begin nu ook wel een beetje te stressen over wat ik allemaal nog moet doen en met de weinige tijd. Ik vind het lastig om mijn focus te hebben op studie en als ik thuis ben (en niet de hele avond moet werken), ben ik zo moe en lukt het me ook niet eraan te zitten... Ik hoop hier nog een ritme in te vinden. 
+
+<img alt="Screenshot 2026-02-10 at 15 54 51" src="https://github.com/user-attachments/assets/3db07c40-d0c0-4065-8d92-f6ae8f0c377c" />
+<img alt="Screenshot 2026-02-10 at 15 55 07" src="https://github.com/user-attachments/assets/39392aab-0d2f-437d-9acb-0f5108b40b69" />
+
+### Woensdag
+
+
+</details>
 
 
 
