@@ -42,7 +42,7 @@
 }
 
 .other-theme{
-    --mainAchtergrond: white;
+    --mainAchtergrond: red;
     --achtergrondFolderEen: black;
     --tekstFolderEen: white;
     --achtergrondFolderTwee: black;
@@ -56,27 +56,136 @@
 }
 
 h1{
-    font-family: var(--normaalFontBold);
+    position: relative;
+    display: inline-block;
+
     letter-spacing: 0.01em;
-    color: white;
+    color: var(--mainTekstKleur);
+    font-family: var(--fancyFont);
+    font-weight: 1;
+
+    /* white-space: nowrap;
+
+    /* caret */
+    /* border-right: .08em solid var(--lijn); */
+
+    /* reveal */
+    /* clip-path: inset(0 100% 0 0); */
+
+    /* animation:
+        typing 3.5s steps(40, end) forwards,
+        blink-caret 0.7s step-end infinite; */
+}
+
+@media (min-width: 0px){ 
+
+    h1{
+        font-size: 2em;
+    }
+
+    h2{
+        font-size: 0.9em;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+
+    h4{
+        font-size: 1.4em;
+    }
+
+    h5{
+        font-size: 0.7em;
+    }
+
+    p{
+        font-size: 0.6em;
+    }
+
+    li{
+        font-size: 0.6em;
+    }
+
+}
+
+@media (min-width: 414px){
+
+    h1{
+        font-size: 3.5em;
+    }
+
+    h2{
+        font-size: 1.2em;
+    }
+
+    h3{
+        font-size: 2em;
+    }
+
+    h4{
+        font-size: 2em;
+    }
+
+    h5{
+        font-size: 0.9em;
+    }
+
+    p{
+        font-size: 0.8em;
+    }
+
+    li{
+        font-size: 0.8em;
+    }
+
+}
+
+@media (min-width: 798px){
+
+    h1{
+        font-size: 4.5em;
+    }
+
+    h2{
+        font-size: 1.3em;
+    }
+
+    h3{
+        font-size: 3em;
+    }
+
+    h4{
+        font-size: 3em;
+    }
+
+    h5{
+        font-size: 1em;
+    }
+
+    li{
+        font-size: 1em;
+    }
+
+    p{
+        font-size: 1em;
+    }
 }
 
 h2{
     font-family: var(--normaalFont);
     letter-spacing: 0.01em;
-    color: white;
+    color: var(--mainTekstKleur);
 }
 
 h3{
     font-family: var(--fancyFont);
     color: var(--mainTekstKleur);
-    font-size: 5em;
     font-weight: 1;
 }
 
 h4{
     font-family: var(--fancyFont);
-    font-size: 3em;
     font-weight: 1;
 }
 
@@ -105,7 +214,7 @@ header{
     align-items: center;
     justify-content: center;
 
-    height: 94vh;
+    height: 100vh;
 }
 
 /* -------------------------------------------- MAIN -------------------------------------------*/
@@ -117,9 +226,9 @@ header{
     flex-direction: row;
     position: absolute;
     justify-content: space-between;
-    color: var(--tekstFolderEen);
+    color: var(--mainTekstKleur);
 
-    padding: 0.2em;
+    padding: 0.1em 0.6em;
     top: 0.5em;
     width: 100%;
 }
@@ -143,33 +252,25 @@ article{
 }
 
 article section{
-    width: 95vw;
-    margin-bottom: 2em;
-    padding: 0.5em 1em;
-
-    /* max-height: 140px; */
     overflow: hidden;
-}
 
-article.active section{
-    max-height: 800px;
-}
-
-article.active{
-    z-index: 10;
+    width: 95vw;
+    padding: 0.5em 1em;
 }
 
 /* Folders schuiven omhoog */
+
+/* NOG RESPONSIVE MAKEN */
 
 .folder-2.active{ 
     transform: translateY(-259.9px);
 }
 
 .folder-3.active{
-    transform: translateY(-848px);
+    transform: translateY(-865px);
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 0px){ 
 
     .folder-2.active{
         transform: translateY(-195px);
@@ -181,25 +282,81 @@ article.active{
 
 }
 
+@media (max-width: 414px){ 
+
+    .folder-2.active{
+        transform: translateY(-190px);
+    }
+
+    .folder-3.active{
+        transform: translateY(-100px);
+    }
+
+}
+
 /* ----------------- FOLDER 1 -----------------*/
 
 .folder-1{
     position: relative;
-    z-index: 1;
 }
 
 .folder-1 p{ /* ----- tabje -----*/
     background-color: var(--achtergrondFolderEen);
     color: var(--tekstFolderEen);
     text-transform: uppercase;
-    width: 30vw;
-    max-width: 80px;
-
+    
     padding: 0.6em 1em;
     font-weight: bold;
 
     border-radius: 12px 12px 0 0;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+}
+
+@media (min-width: 0px){
+
+    .folder-1 p{
+        width: 5em;
+    }
+
+    .folder-2 p{
+        width: 5.5em;
+    }
+
+    .folder-3 p{
+        width: 12.5em;
+    }
+
+}
+
+@media (min-width: 414px){
+    
+    .folder-1 p{
+        width: 5.2em;
+    }
+  
+    .folder-2 p{
+        width: 5.8em;
+    }
+
+    .folder-3 p{
+        width: 12.5em;
+    }
+}
+
+@media (min-width: 798px){
+       
+    .folder-1 p{
+        width: 5.4em;
+    }
+
+    .folder-2 p{
+        width: 6.1em;
+    }
+
+    .folder-3 p{
+        width: 12.5em;
+    }
+ 
 }
 
 .folder-1 section{ /* ----- folder -----*/
@@ -223,24 +380,12 @@ article.active{
     background-color: var(--achtergrondFolderTwee);
     text-transform: uppercase;
     color: var(--tekstFolderTwee);
-    width: 30vw;
-    max-width: 100px;
 
     padding: 0.6em 1em;
     font-weight: bold;
 
     border-radius: 12px 12px 0 0;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-}
-
-@media (max-width: 768px) {
-
-    .folder-2 p{
-        width: 80vw;
-        margin-left: 4.4em;
-
-        padding: 0.6em 1em;
-    }
 }
 
 .folder-2 section{ /* ----- folder -----*/
@@ -253,12 +398,40 @@ article.active{
     padding: 1em 2em;
 }
 
-.folder-2 ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 100px;  
-    column-gap: 200px;
-    margin: 4em 9em;
+@media (min-width: 0px){
+
+    .folder-2 ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 25px;  
+        column-gap: 50px;
+        margin: 0.5em 2em;
+    }
+
+}
+
+@media (min-width: 414px){
+
+    .folder-2 ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 50px;  
+        column-gap: 100px;
+        margin: 1em 3em;
+    }
+ 
+}
+
+@media (min-width: 798px){
+
+    .folder-2 ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 100px;  
+        column-gap: 200px;
+        margin: 4em 9em;
+    }
+
 }
 
 .folder-2 li{
@@ -283,21 +456,12 @@ article.active{
     background-color: var(--achtergrondFolderDrie);
     text-transform: uppercase;
     color: var(--tekstFolderDrie);
-    width: 55vw;
-    max-width: 200px;
 
     padding: 0.6em 1em;
     font-weight: bold;
 
     border-radius: 12px 12px 0 0;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
-}
-
-@media (max-width: 768px) {
-
-    .folder-3 p{
-        margin-left: 13em;
-    }
 }
 
 .folder-3 section{ /* ----- folder -----*/
@@ -308,7 +472,7 @@ article.active{
     border-radius: 6px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 
-    height: 550px;
+    height: 570px;
 
     padding: 1em 2em;
 }
@@ -318,14 +482,11 @@ article.active{
 .about-me{
     display: flex;
     flex-direction: row;
-    margin: 5em;
+    margin: 0 5em;
 
     border-left: 1px solid var(--lijn);
 
-    height: 100vh;
     color: var(--mainTekst);
-
-    /* Margin even groot maken als de secties hierboven */
 }
 
 .about-me img{
@@ -350,23 +511,44 @@ article.active{
 }
 
 @keyframes afbeeldingUno{
-  from{
-    transform: translateX(80em)
-  }
-  to{
-    transform: translateX(0em)
-  }
+
+    from{
+        transform: translateX(80em)
+    }
+
+    to{
+        transform: translateX(0em)
+    }
+
 }
 
-.about-me div {
+.about-me div{
     margin-left: 2em;
     margin-right: 8em;    
+}
+
+@media (min-width: 414px){
+
+    .about-me div{
+        margin-left: 0.5em;
+        margin-right: 0.5em;  
+    }
+ 
+}
+
+@media (min-width: 798px){
+
+    .about-me div{
+        margin-left: 1em;
+        margin-right: 1em;  
+    }
+ 
 }
 
 .about-me p{
     padding-top: 1em;
     padding-right: 3em;
-    width: 20vw;   
+    width: 40vw;   
 
     p{
       aspect-ratio: 1;
@@ -410,8 +592,6 @@ article.active{
     overflow-x: hidden;
     perspective: 1px;
     transform-style: preserve-3d;
-
-    margin-top: 25em;
 }
 
 .img-wrapper{
@@ -514,43 +694,4 @@ article.active{
 
 .klasgenoten{
     height: 100vh;
-    margin-top: 9em;
 }
-
-/* ---------------------------------------------- ANIMATIES --------------------------------------------------*/
-
-
-
-/* Glitch Text Reveal */
-
-/* [data-char] {
-  color: transparent;
-  position: relative;
-}
-
-[data-char]:after {
-  --txt: attr(data-char);
-  animation-duration: 0.2s;
-  animation-delay: 0.5s;
-  animation-timing-function: steps(1);
-  animation-fill-mode: backwards;
-  content: var(--txt);
-  color: var(--color);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-@keyframes glitch-switch {
-  0% { content: var(--char-0); }
-  10% { content: var(--char-1); }
-  20% { content: var(--char-2); }
-  30% { content: var(--char-3); }
-  40% { content: var(--char-4); }
-  50% { content: var(--char-5); }
-  60% { content: var(--char-6); }
-  70% { content: var(--char-7); }
-  80% { content: var(--char-8); }
-  90% { content: var(--char-9); }
-  100% { content: var(--char-0); }
-} */

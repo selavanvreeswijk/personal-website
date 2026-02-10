@@ -36,7 +36,7 @@ async function insertCharacter() {
     // <li>Bio: ${person.bio}</li>
 
         let titelNaam =`
-            <h1>${person.name}</h1>
+            <h1>${person.name}   </h1>
         `
 
        let mijnData = `
@@ -74,26 +74,7 @@ theme.addEventListener('click', () => {
     };
 });
 
-// Glitch Text Reveal
 
-// const { Splitting } = window
-// const RESULTS = Splitting()
-
-// const GLITCH_CHARS = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/'.split('')
-
-
-// for (let r = 0; r < RESULTS.length; r++) {
-//   const CHARS = RESULTS[r].chars
-//   for (let c = 0; c < CHARS.length; c++) {
-
-//     for (let g = 0; g < 10; g++) {
-//       CHARS[c].style.setProperty(
-//         `--char-${g}`,
-//         `"${GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)]}"`
-//       )
-//     }
-//   }
-// }
 
 
 
