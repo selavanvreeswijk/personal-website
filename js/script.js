@@ -3,7 +3,7 @@ const list = document.querySelector(".folder-1 section ul");
 const mijnNaam = document.querySelector("header");
 const randomLijst = document.querySelector('.folder-2 ul');
 
-// Folders scrollen
+// Folders scrollen inspiratie van: https://nitro.framer.website/
 
 window.addEventListener("scroll", () => { 
     const scroll = window.pageYOffset;
@@ -55,7 +55,45 @@ for (let i = randomLijst.children.length; i >= 0; i--) {
     randomLijst.appendChild(randomLijst.children[Math.random() * i | 0]);
 }
 
+// Ander theme
 
+const theme = document.querySelector('.other-theme')
+let lightMode = true
+
+theme.addEventListener('click', () => {
+    if (lightMode) {;
+        lightMode = false;
+
+        document.body.classList.add('other-theme');
+        theme.textContent = 'Minimal Minor Web Development';
+    } else {;
+        lightMode = true;
+
+        document.body.classList.remove('other-theme');
+        theme.textContent = 'Minor Web Development';
+    };
+});
+
+// Glitch Text Reveal
+
+// const { Splitting } = window
+// const RESULTS = Splitting()
+
+// const GLITCH_CHARS = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/'.split('')
+
+
+// for (let r = 0; r < RESULTS.length; r++) {
+//   const CHARS = RESULTS[r].chars
+//   for (let c = 0; c < CHARS.length; c++) {
+
+//     for (let g = 0; g < 10; g++) {
+//       CHARS[c].style.setProperty(
+//         `--char-${g}`,
+//         `"${GLITCH_CHARS[Math.floor(Math.random() * GLITCH_CHARS.length)]}"`
+//       )
+//     }
+//   }
+// }
 
 
 
