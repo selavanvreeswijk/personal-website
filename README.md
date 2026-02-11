@@ -53,14 +53,18 @@ Vandaag heb ik de hele dag aan mijn website gewerkt. Ik heb een juist font gezoc
 <img alt="Screenshot 2026-02-09 at 16 32 01" src="https://github.com/user-attachments/assets/8f00b6ad-efde-4e5c-894a-c85d73836bb0" />
 
 ### Dinsdag
-
 Ik heb mijn afbeeldingen verder uitgezocht en ben begonnen aan een animatie voor mijn naam wanneer je op de website komt. Ik heb een zogenaamde glitch reveal en typewriter effect geprobeerd maar dit lukte niet, dus heb ik na een uur dat gelaten en ben ik mijn website responsive gaan maken. Daar ben ik uiteindelijk 2,5 uur mee bezig geweest en het is nog niet eens gelukt... Hier ga ik morgen verder mee aan de slag, evenals mijn minorgenoten toevoegen en het extra thema finetunen. Ik wil ook nog heel graag een animatie met mijn tekst maar ik zie dit als iets extra's, eerst dit begin. Ik begin nu ook wel een beetje te stressen over wat ik allemaal nog moet doen en met de weinige tijd. Ik vind het lastig om mijn focus te hebben op studie en als ik thuis ben (en niet de hele avond moet werken), ben ik zo moe en lukt het me ook niet eraan te zitten... Ik hoop hier nog een ritme in te vinden. 
 
 <img alt="Screenshot 2026-02-10 at 15 54 51" src="https://github.com/user-attachments/assets/3db07c40-d0c0-4065-8d92-f6ae8f0c377c" />
 <img alt="Screenshot 2026-02-10 at 15 55 07" src="https://github.com/user-attachments/assets/39392aab-0d2f-437d-9acb-0f5108b40b69" />
 
 ### Woensdag
-Samen met Teun code nagelopen in de ochtend. Duurde een half uur. Ik moet: kijken naar de bestanden van mijn font (ik heb nu ott & ttf), mijn classes en benaming en camelCases moet ik in het Engels, consistent zijn in dubbele quotes en enkele quotes in javascript. 
+Er zijn flinke stappen gemaakt vandaag. Samen met Teun ben ik de ochtend begonnen door code na te lopen, dit duurde ongeveer een half uur. Ik moet: kijken naar de bestanden van mijn font (ik heb nu ott & ttf), mijn classes en benaming en camelCases moet ik in het Engels, consistent zijn in dubbele quotes en enkele quotes in javascript. Ik heb verder dingen geleerd als MARK: in CSS en een paar andere trucjes. Hierna heb ik me gestort op mijn andere thema, en dat duurde veel langer dan verwacht. Het duurde vooral lang om alles van de horizontale scrollbar in de root te veranderen en netjes te maken. Ik heb hier 1,5 uur over gedaan. Daarna ben ik aan de slag gegaan met mijn leerdoelen weergeven en heb ik besloten dat ik deze niet visueel ga weergeven, want ik doe het eigenlijk al op mijn website en kan dat aan de hand daarvan uitleggen. Hierna heb ik mijn minorgenoten toegevoegd op mijn website, hier heb ik 1 uur over gedaan. Het duurde even voordat JS lukte. Daarna ben ik mijn website wederom responsive gaan maken en ben ik achter de CSS clamp() functie gekomen, waarin je dus op een super mooie en subtiele manier je website kan schalen. Wat een uitvinding! Dit heb ik al op mijn teksten toegepast en wil ik op andere dingen ook toepassen. Daar ga ik vanavond mee verder, net als mijn website finetunen, bij extra tijd nog een animatie op de h1, mjin bronnen en andere dingen op orde hebben voor de presentatie van morgen. Verder ben ik vandaag op een andere plek gaan zitten en heb ik mijn earbuds op noise canceling gezet en dat hielp enorm met mijn focus. Ik werd te snel afgeleid op de vorige plek. 
+
+<img alt="Screenshot 2026-02-11 at 15 57 25" src="https://github.com/user-attachments/assets/1d208132-903e-4912-9b2b-06bbb24afbb2" />
+<img alt="Screenshot 2026-02-11 at 15 57 44" src="https://github.com/user-attachments/assets/31b455a5-a68e-4f23-a0c8-7a0a1a6424f5" />
+<img alt="Screenshot 2026-02-11 at 15 57 56" src="https://github.com/user-attachments/assets/a58cf92c-2f50-4dc6-84d2-ab6aae38ed88" />
+
 
 </details>
 
