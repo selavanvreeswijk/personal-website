@@ -5,36 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Website</title>
         <link href="./css/styles.css" rel="stylesheet">
-        <link rel="icon" href="./images/favicon.jpg"> <!-- Favicon -->
+        <link rel="icon" href="./images/favicon.jpg"> 
     </head>
 
     <body>
+        <a id="top"></a>
+
         <header>
-            <h1><!-- H1 Data van de API--></h1>
-      
-            <h2>About Me</h2>
+            <h1 id="person-321-name"><!--Data API--></h1>
         </header>
 
         <main>
-            <div class="statisch">
+            <div class="static">
                 <h5>Feb 2026</h5>
 
-                <h5 class="other-theme">Minor Web Development</h5>
+                <h5 class="theme-toggle">Minor Web Development</h5>
             </div>
 
             <div class="container">
                 <article class="folder-1"> 
-                    <p>Stats</p> <!--Label-->
+                    <p>Stats</p>
                     
                     <section>
                         <h4>Data</h4> 
 
-                        <ul></ul> <!--Data van de API-->
+                        <ul id="person-321-data"></ul> <!--Data API-->
                     </section>
                 </article>
 
                 <article class="folder-2"> 
-                   <p>Words</p> <!--Label-->
+                   <p>Words</p> 
 
                     <section>
                         <h4>Things that describe me</h4> 
@@ -53,7 +53,7 @@
                 </article>
 
                 <article class="folder-3"> 
-                     <p>Interesting Facts</p> <!--Label-->
+                     <p>Interesting Facts</p> 
 
                     <section>
                         <h4>Did you know?</h4> 
@@ -69,35 +69,34 @@
                 </article>
             </div>
 
-            <section class="about-me"> <!--Sectie over mij met foto-->
+            <section class="about-me"> <!--Sectin about me with picture-->
                 <div>
-                    <h3>My name is Sela</h3>
+                    <h2>My name is Sela</h2>
 
                     <p>
-                        I have always been interested in websites — how they work, how they look, and how ideas turn into something digital. For a long time, 
-                        I knew that building websites was what I wanted to do.
+                        Like many teenagers, I once had to choose what I wanted to study. With so many options, I felt overwhelmed and unsure. 
+                        So, I decided to take a few gap years to explore myself and life. You can see a part of what I discovered in the folders above and pictures that follow.
+                        During my time for life, one thing slowly became clear: I wanted to build websites.
                     </p>
 
                     <p>
-                        During my studies in Communication and Multimedia Design, that interest became more concrete. 
-                        I chose Web Development as my specialisation and started turning ideas into real websites. By working on different projects, 
-                        I learned how to combine structure, design, and interaction in a way that feels clear and intentional.
-                        This website shows where I am now as a web developer. It reflects what I have learned so far and how I approach building websites: curious, detail-focused, and always learning.
+                        That led me to Communication and Multimedia Design. There, my interest became more concrete. I chose Tech and Web Development as my specialisations and started turning ideas into real, working websites. 
+                        By working on different projects, I learned how to combine structure, design, and interaction in a way that feels clear and intentional. 
+                        This website reflects who I am as a person and as a web developer: curious, detail-focused, and always learning. Within this project, I want to strengthen my understanding of JavaScript beyond the basics. Moving from simply making things work to truly understanding why they work. At the same time, I want to deepen my knowledge of CSS by improving how I structure layouts, use positioning and responsive design, and create cleaner, more consistent styling.
                     </p>
 
                     <p>
-                        This project is my next step. Below, I describe the learning goals I want to achieve during this project and how I plan to further develop my skills as a web developer.
-                    </p> 
+                        I'm excited about the next steps in this journey and about challenging myself to grow further as a web developer.
+                    </p>
                 </div>
 
                 <img src="./images/zee.jpg" alt="Picture of author">
             </section>
 
-            <!--Sectie foto's van mij--> <!--Bron inspiratie: https://codepen.io/Sela-van-Vreeswijk/pen/GgqwRBm?editors=1000-->
+            <!--Section pictures about me -->
+            <!--Bron inspiratie: https://codepen.io/Sela-van-Vreeswijk/pen/GgqwRBm?editors=1000-->
 
             <div class="horizontal-scroll-wrapper"> 
-                <!-- <h4>Pictures that describe me</h4> -->
-
                 <div class="img-wrapper slower">
                     <img src="./images/crozon-hike.jpg" alt="A Hike in Crozon, France">
                 </div>
@@ -146,35 +145,21 @@
                     <img src="./images/albanian-sun.jpg" alt="An Albanian sunset">
                 </div>
             </div>
-      
-            <section class="leerdoelen"> <!--Sectie leerdoelen-->
-                <h3>Learning Goals</h3>
+
+            <section class="classmates">  <!--Section API classmates-->
+                <h3>Friends I'm doing this minor with</h3>
 
                 <div>
-                    <div>
-                        <img src="./images/zee.jpg" alt="Picture of author">
-                        <p>Leerdoel 1</p>
-                    </div>
-                    
-                    <div>
-                        <img src="./images/zee.jpg" alt="Picture of author">
-                        <p>Leerdoel 2</p>
-                    </div>
+                    <ul id="person-305"> <!--Luna--> </ul>
 
-                    <div>
-                        <img src="./images/zee.jpg" alt="Picture of author">
-                        <p>Leerdoel 3</p>
-                    </div>
+                    <ul id="person-298"> <!--Joshua--> </ul>
+
+                    <ul id="person-291"> <!--Iris--> </ul>
                 </div>
             </section>
 
-            <section class="klasgenoten">  <!--Sectie API klasgenoten-->
-                <h3>Friends I'm doing this with</h3>
+            <a href="#top" class="back-to-top">Back to top</a>
 
-                <ul></ul> <!--Luna-->
-                <ul></ul> <!--Iris-->
-                <ul></ul> <!--Joshua-->
-            </section>
         </main>
 
         <script src="js/script.js"></script>
