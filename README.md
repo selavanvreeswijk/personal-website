@@ -60,7 +60,7 @@ Ik heb mijn afbeeldingen verder uitgezocht en ben begonnen aan een animatie voor
 <img alt="Screenshot 2026-02-10 at 15 55 07" src="https://github.com/user-attachments/assets/39392aab-0d2f-437d-9acb-0f5108b40b69" />
 
 ### Woensdag
-
+Samen met Teun code nagelopen in de ochtend. Duurde een half uur. Ik moet: kijken naar de bestanden van mijn font (ik heb nu ott & ttf), mijn classes en benaming en camelCases moet ik in het Engels, consistent zijn in dubbele quotes en enkele quotes in javascript. 
 
 </details>
 
