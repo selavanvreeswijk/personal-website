@@ -6,22 +6,22 @@
 
 @font-face{ 
     font-family:'Arnhem';
-    src: url('../fonts/arnhem.otf') format('truetype');
+    src: url('../fonts/arnhem.woff2') format('truetype');
 }
 
 @font-face{ 
     font-family:'Arnhem Bold';
-    src: url('../fonts/arnhem-bold.otf') format('truetype');
+    src: url('../fonts/arnhem-bold.woff2') format('truetype');
 }
 
 @font-face{ 
     font-family:'Swiss';
-    src: url('../fonts/swiss.ttf') format('truetype');
+    src: url('../fonts/swiss.woff2') format('truetype');
 }
 
 @font-face{ 
     font-family:'Lato';
-    src: url('../fonts/lato.ttf') format('truetype');
+    src: url('../fonts/lato.woff2') format('truetype');
 }
 
 :root{
@@ -40,6 +40,7 @@
     --normalFont: 'Arnhem', sans-serif; 
     --normalFontBold: 'Arnhem Bold', sans-serif; 
     --fancyFont: 'Swiss', sans-serif;
+    --arnhemFont: 'Arnhem', sans-serif;
 
     --imageFilter: grayscale(0%);
 
@@ -70,6 +71,8 @@
     --opacity: opacity;
     --sticky: sticky;
     --hoverToTop: pink;
+
+    --folder-shift: 24vh;
 }
 
 .other-theme{
@@ -86,6 +89,7 @@
     --normalFont: sans-serif;
     --normalFontBold: sans-serif;
     --fancyFont: sans-serif;
+    --arnhemFont: sans-serif;
 
     --imageFilter: grayscale(100%);
 
@@ -118,7 +122,7 @@
     --hoverToTop: grey;
 }
 
-/* ------------------------------------- MARK: GENERAL 
+/* --------------------------------------------------------------------------------- MARK: GENERAL 
 */
 
 h1{
@@ -175,15 +179,16 @@ h4{
 
 h5{
     color: var(--mainTextColor);
+    font-family: var(--arnhemFont);
 
-    font-size: clamp(0.95rem, 1.3vw, 1.1rem); 
+    font-size: clamp(0.95rem, 2vw, 1.1rem); 
 }
 
 p{
     color: var(--mainTextColor);
     font-family: var(--mainTextFont);
 
-    font-size: clamp(0.9rem, 1.2vw, 1.1rem); 
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem); 
 }
 
 li{
@@ -203,7 +208,7 @@ img{
     filter: var(--imageFilter);
 }
 
-/* -------------------------------------------- MARK: HEADER 
+/* ---------------------------------------------------------------------------------------- MARK: HEADER 
 */
 
 header{
@@ -215,7 +220,7 @@ header{
     height: 100vh;
 }
 
-/* -------------------------------------------- MARK: MAIN 
+/* ---------------------------------------------------------------------------------------- MARK: MAIN 
 */
 
 .static{ /* titels */
@@ -233,7 +238,6 @@ header{
     }
 
     @media (prefers-reduced-motion: no-preference){
-
         animation-name: opacity;
         animation-range: entry contain;
         animation-fill-mode: both;
@@ -241,7 +245,7 @@ header{
     }
 }
 
-/* -------------------------------------------- MARK: FOLDERS 
+/* ---------------------------------------------------------------------------------------- MARK: FOLDERS 
 */
 
 .container{ /* container folder */
@@ -255,46 +259,21 @@ header{
         transition: transform 2s ease;
 
         section{ /* contents folder */
-            overflow: hidden;
-
             width: 95vw;
-            padding: 0.5em 1em;
+            padding: 0.5em 1em 1.5em 1em;
         }
     }
 }
 
 /* Folders go up */
+/* Source: chatGPT to help make the folders responsive */
 
-.folder-2.active{ 
-    transform: translateY(-259.9px);
+.folder-2.active{
+  transform: translateY(calc(-1 * var(--folder-shift)));
 }
 
 .folder-3.active{
-    transform: translateY(-865px);
-}
-
-@media (max-width: 0px){ 
-
-    .folder-2.active{
-        transform: translateY(-195px);
-    }
-
-    .folder-3.active{
-        transform: translateY(-390px);
-    }
-
-}
-
-@media (max-width: 414px){ 
-
-    .folder-2.active{
-        transform: translateY(-190px);
-    }
-
-    .folder-3.active{
-        transform: translateY(-100px);
-    }
-
+  transform: translateY(calc(-2.485 * var(--folder-shift)));
 }
 
 /* ----------------- FOLDER 1 -----------------*/
@@ -303,6 +282,10 @@ header{
     position: relative;
 
     p{ /* tab */
+        position: absolute;
+        top: 0%;
+        transform: translateY(-100%);
+
         background-color: var(--backgroundFolderOne);
         color: var(--textFolderOne);
         text-transform: var(--textUppercase);
@@ -311,64 +294,17 @@ header{
         font-weight: bold;
 
         border-radius: 12px 12px 0 0;
-        box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
     }
 
     section{ /* folder */
+        padding-top: 3rem;
+
         background-color: var(--backgroundFolderOne);
         color: var(--textFolderOne);
         border-radius: 0 6px 6px 6px;
-        box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 
         padding: 1em 2em;
     }
-}
-
-@media (min-width: 0px){
-
-    .folder-1 p{
-        width: 5em;
-    }
-
-    .folder-2 p{
-        width: 5.5em;
-    }
-
-    .folder-3 p{
-        width: 12.5em;
-    }
-
-}
-
-@media (min-width: 414px){
-    
-    .folder-1 p{
-        width: 5.2em;
-    }
-  
-    .folder-2 p{
-        width: 5.8em;
-    }
-
-    .folder-3 p{
-        width: 12.5em;
-    }
-}
-
-@media (min-width: 798px){
-       
-    .folder-1 p{
-        width: 5.4em;
-    }
-
-    .folder-2 p{
-        width: 6.1em;
-    }
-
-    .folder-3 p{
-        width: 12.5em;
-    }
- 
 }
 
 /* ----------------- FOLDER 2 -----------------*/
@@ -376,9 +312,14 @@ header{
 .folder-2{
     position: relative;
     z-index: 2;
+    margin-top: 4em;
 
     p{ /* tab */
-        margin-left: 5.15em;
+        position: absolute;
+        top: 0%;
+        transform: translateY(-90%);
+        left: 10%;
+
         background-color: var(--backgroundFolderTwo);
         text-transform: var(--textUppercase);
         color: var(--textFolderTwo);
@@ -387,64 +328,35 @@ header{
         font-weight: bold;
 
         border-radius: 12px 12px 0 0;
-        box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
     }
 
     section{ /* folder */
+        padding-top: 3rem;
+
         background-color: var(--backgroundFolderTwo);
         color: var(--textFolderTwo);
 
         border-radius: 6px;
-        box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 
         padding: 1em 2em;
+
+        ul{
+            margin: 0.5em 3em;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(1rem, 3vw, 3rem);
+        }
 
         /* To make items appear at a random place */
         li{ 
             list-style: none;
-            justify-self: start;
         }
 
-        li:nth-child(even){
-            justify-self: end;
+        li:nth-child(3n){
+            justify-self: center;
         }
     }
-}
-
-@media (min-width: 0px){
-
-    .folder-2 ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 25px;  
-        column-gap: 50px;
-        margin: 0.5em 2em;
-    }
-
-}
-
-@media (min-width: 414px){
-
-    .folder-2 ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 50px;  
-        column-gap: 100px;
-        margin: 1em 3em;
-    }
- 
-}
-
-@media (min-width: 798px){
-
-    .folder-2 ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 100px;  
-        column-gap: 200px;
-        margin: 4em 9em;
-    }
-
 }
 
 /* ----------------- FOLDER 3 -----------------*/
@@ -452,10 +364,15 @@ header{
 .folder-3{
     position: relative;
     z-index: 11;
-    overflow: hidden;
+    margin-top: 6em;
 
     p{ /* tab */
-        margin-left: 11.5em;
+        position: absolute;
+        top: 0%;
+        left: 28%;
+        transform: translateY(-90%);
+        padding-top: 3em;
+
         background-color: var(--backGroundFolderThree);
         text-transform: var(--textUppercase);
         color: var(--textFolderThree);
@@ -464,39 +381,41 @@ header{
         font-weight: bold;
 
         border-radius: 12px 12px 0 0;
-        box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
     }
 
     section{ /* folder */
+        padding-top: 3rem;
+
         background-color: var(--backGroundFolderThree);
         color: var(--textFolderThree);
         position: relative;
 
         border-radius: 6px;
-        box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 
-        height: 570px;
+        min-height: 60vh;
+        height: auto;
 
         padding: 1em 2em;
     }
 }
 
-/* -------------------------------------------- MARK: ABOUT ME
+/* ---------------------------------------------------------------------------------------- MARK: ABOUT ME
 */
 
 .about-me{
     display: flex;
-    flex-direction: row;
-    margin: 0 5em;
+    flex-direction: column;
+    gap: clamp(1.5rem, 4vw, 3rem);
 
+    margin: clamp(1.5rem, 5vw, 5rem);
     border-left: 1px solid var(--line);
 
-    height: 80vh;
+    height: auto;
 
     color: var(--mainTekst);
 
+    /* Fade In */
     @media (prefers-reduced-motion: no-preference){
-
         animation-name: var(--opacity);
         animation-range: entry contain;
         animation-fill-mode: both;
@@ -504,24 +423,20 @@ header{
     }
 
     div{
-        margin-left: 2em;
-        margin-right: 8em;  
+        margin-left: 1em;
         
         p{
             padding-top: 1em;
             padding-right: 3em;
-            width: 40vw;   
+            max-width: 60ch;  
         }
     }
 
     img{
-        height: 60vh;
+        width: 100%;
+        height: auto;
+        position: relative;
 	    object-fit: cover;
-
-        position: var(--sticky);
-        top: 15vh;
-        align-self: flex-start;
-        padding-left: 3em;
 
         img{
             aspect-ratio: 1;
@@ -533,6 +448,40 @@ header{
             animation-fill-mode: both;
             animation-timeline: view();
         } 
+    }
+}
+
+@media (min-width: 600px){
+
+    .about-me{
+        gap: clamp(2rem, 5vw, 4rem);
+        margin: clamp(2rem, 6vw, 6rem);
+    }
+
+    .about-me img{
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+        padding-left: 0;
+        position: relative;  
+    }
+}
+
+@media (min-width: 900px){
+
+    .about-me{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .about-me img{
+        flex: 1;
+        max-height: 60vh;
+        object-fit: cover;
+
+        position: var(--sticky);
+        top: 15vh;
+        padding-left: 3em;
     }
 }
 
@@ -580,7 +529,7 @@ header{
  
 }
 
-/* ---------------------------------------------- MARK: GALLERY FOTO'S 
+/* ------------------------------------------------------------------------------------------ MARK: GALLERY FOTO'S 
 */
 
 ::-webkit-scrollbar{
@@ -593,7 +542,7 @@ header{
     flex-direction: var(--flexDirection);
     flex-wrap: var(--flexWrap);
     gap: 2em;
-    margin-top: 30em;
+    margin-top: clamp(6em, 15vh, 30em);
 
     width: var(--imageWidth);
     height: var(--imageHeight);
@@ -625,7 +574,7 @@ header{
     transition: 1s;
 }
 
-body:not(.other-theme) .img-wrapper:hover {
+body:not(.other-theme) .img-wrapper:hover{
     min-height: 65vh;
 }
 
@@ -684,47 +633,123 @@ body:not(.other-theme) .img-wrapper:hover {
     transform: var(--transformLast);
 }
 
-/* ------------------------------------------- MARK: API CLASSMATES  
+@media (max-width: 768px){
+
+    .horizontal-scroll-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        height: auto;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        transform: none;
+        perspective: none;
+        transform-style: flat;
+
+        margin: 6em 1.5em 4em 1.5em;
+
+        scroll-snap-type: x mandatory;
+    }
+
+    .img-wrapper{
+        flex: 0 0 clamp(220px, 70vw, 320px);
+        height: clamp(220px, 60vw, 300px);
+
+        transform: none;
+        min-height: auto;
+
+        scroll-snap-align: start;
+    }
+
+    .horizontal-scroll-wrapper img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    body:not(.other-theme) .img-wrapper:hover {
+        min-height: auto;
+    }
+}
+
+/* --------------------------------------------------------------------------------------- MARK: API CLASSMATES  
 */
+
+/* HIER NOG DIE CYD STRUCTUUR DOEN!!! */
 
 .classmates{
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    margin-bottom: 13em;
+    width: min(1200px, 90%);
+    margin-inline: auto;
+    margin-top: clamp(4em, 8vw, 10em);
+    margin-bottom: clamp(4em, 10vw, 13em);
+}
 
-    div{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
+.classmates .classmate-item{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
 
-        margin-top: 3em;
+    width: 100%;
+    gap: 3em;
+    margin-top: 3em;
+}
 
-        ul{
-            margin-top: 1.5em;
-        }
+.classmates .classmate-item img{
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
 
-        li{
-            list-style: none;
-            color: var(--mainTextColor);
-            text-transform: capitalize; /* Om elke eerste letter van de data uit de API een hoofdletter te geven. Iris had dit bijvoorbeeld niet gedaan */
-        }
+    margin-bottom: clamp(0.75em, 2vw, 1em);
+}
 
-        img{
-            width: 20vw;
-            height: 40vh;
-            object-fit: cover;
-            padding-bottom: 0.5em;
-        }
+.classmates .classmate-item ul{
+    margin-top: 1.5em;
+    padding: 0;
+}
 
-        .output-styling{
-            font-weight: 100;
-        }
+.classmates .classmate-item li{
+    list-style: none;
+    color: var(--mainTextColor);
+    text-transform: capitalize; /* Om elke eerste letter van de data uit de API een hoofdletter te geven. Iris had dit bijvoorbeeld niet gedaan */
+}
+
+.classmates .output-styling{
+    font-weight: 100;
+}
+
+@media (max-width: 900px){
+    .classmates .classmate-item{
+        flex-direction: column;
+        align-items: center;
     }
 
-    @media (prefers-reduced-motion: no-preference){
+    .classmates .classmate-item img{
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 500px){
+    .classmates .classmate-item{
+        gap: 2em;
+    }
+
+    .classmates .classmate-item img{
+        max-width: 220px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference){
+    .classmates{
         animation-name: var(--opacity);
         animation-range: entry contain;
         animation-fill-mode: both;

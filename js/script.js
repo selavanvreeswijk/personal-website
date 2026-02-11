@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
         folder.classList.remove('active');
     });
 
-    if (scroll > 300) {
+    if (scroll > 400) {
         folders[1].classList.add('active');
     };
 
