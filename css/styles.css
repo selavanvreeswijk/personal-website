@@ -20,7 +20,7 @@
 }
 
 :root{
-    /* Colors */
+    /* Kleuren */
     --mainBackground: #777162;
     --backgroundFolderOne: #969080;
     --textFolderOne: #3f3e2c;
@@ -32,14 +32,13 @@
     --mainTextColorOtherTheme: #d8d6cf;
     --line: #D6D4CB;
     
-    /* Typography */
+    /* Typografie */
     --normalFont: 'Arnhem', sans-serif; 
-    --normalFontBold: 'Arnhem Bold', sans-serif; 
     --fancyFont: 'Swiss', sans-serif;
     --arnhemFont: 'Arnhem', sans-serif;
-    --mainTextFont: 'Inter', sans-serif;
+    --mainTextFont: 'Lato', sans-serif;
 
-    /* Horizontal scroll */
+    /* Horizontale Scroll */
     --imagesTransform: rotate(-90deg) translateX(-100%);
     --wrapper-transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
     --parallax-transform: none;
@@ -55,7 +54,7 @@
     --transformLast: translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh);
 
     /* Layout */
-    --imageWidth: 100vh;
+    --imageWidth: 100vh; /* vh & vw omgedraaid is nodig voor de horizontale scroll door de rotatie, ze draaien om */
     --imageHeight: 100vw;
     --imagesOverflowY: auto;
     --imagesOverflowX: hidden;
@@ -71,13 +70,13 @@
     --textUppercase: uppercase;
     --opacity: opacity;
 
-    /* Animation */
+    /* Animaties */
     --animationNameText: texts;
     --animationNameImage: imageAboutMe;
 }
 
 .other-theme{
-    /* Colors */
+    /* Kleuren */
     --mainBackground: white;
     --backgroundFolderOne: black;
     --textFolderOne: white;
@@ -88,13 +87,12 @@
     --mainTextColor: black;
     --mainTextColorOtherTheme: black;
 
-    /* Typography */   
+    /* Typografie */   
     --normalFont: sans-serif;
-    --normalFontBold: sans-serif;
     --fancyFont: sans-serif;
     --arnhemFont: sans-serif;
 
-    /* Horizontal Scroll */   
+    /* Horizontale Scroll */   
     --transformImagesWrapper: none;
     --minimumHeightImages: auto;
 
@@ -114,7 +112,7 @@
     --hoverToTop: grey;
     --textUppercase: none;
 
-    /* Animation */
+    /* Animaties */
     --animationNameText: none;
     --animationNameImage: none;
 }
@@ -123,28 +121,29 @@
 */
 
 h1{
-    position: relative;
-    display: inline-block;
-
-    letter-spacing: 0.01em;
-    color: var(--mainTextColor);
     font-family: var(--fancyFont);
-    font-weight: 1; /* Otherwise the letters would be too thick */
+    color: var(--mainTextColor);
+    /* Anders waren de letters te dik vanuit het font */
+    font-weight: 1;
+    letter-spacing: 0.01em;
 
+    /* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp */
     font-size: clamp(2rem, 6vw, 4.5rem); 
 
-    animation: colorChange 4s ease-in-out infinite alternate;
+    display: inline-block;
 
-    /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp */
+    position: relative;
+
+    animation: colorChange 4s ease-in-out infinite alternate;
 }
 
 @keyframes colorChange{
 
-  0%{
+  0% {
     color: var(--mainTextColor);
   }
 
-  100%{
+  100% {
     color: var(--mainTextColorOtherTheme);
   }
 
@@ -211,10 +210,11 @@ header{
 /* ---------------------------------------------------------------------------------------- MARK: MAIN 
 */
 
-.static{ /* titels */
+.static{ /* Titels */
+    position: absolute;
+
     display: flex;
     flex-direction: row;
-    position: absolute;
     justify-content: space-between;
 
     padding: 0.1em 0.6em;
@@ -236,26 +236,27 @@ header{
 /* ---------------------------------------------------------------------------------------- MARK: FOLDERS 
 */
 
-.container{ /* container folders */
+.container{ /* Container Folders */
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container article{  /* individual folder */
+.container article{  /* Individuele Folder */
     position: relative;
+
     transition: transform 2s ease;     
 }
 
-.container article section{  /* contents folder */
+.container article section{  /* Inhoud Folder */
     width: 95vw;
     padding: 0.5em 1em 1.5em 1em;
 }
 
-/* Folders go up */
-/* Source: chatGPT to help make the folders responsive */
+/* Folders scrollen omhoog */
 
+/* Bron: chatGPT om de folders responsive te maken */
 .folder-2.active{
   transform: translateY(calc(-1 * var(--folder-shift)));
 }
@@ -265,37 +266,35 @@ header{
 }
 
 /* ----------------- FOLDER 1 -----------------*/
+/* Ik heb deze styling bewust per folder gedaan omdat het folder specifiek is */
 
 .folder-1{
     position: relative;
 }
 
-.folder-1 h3{ /* tab */
-    position: absolute;
-    top: 0%;
-    transform: translateY(-100%);
-
+.folder-1 h3{ /* Tab */
     background-color: var(--backgroundFolderOne);
+
     color: var(--textFolderOne);
     text-transform: var(--textUppercase);
-        
-    padding: 0.6em 1em;
-    font-weight: bold;
-
-    border-radius: 12px 12px 0 0;
-
     font-family: var(--mainTextFont);
     font-size: clamp(0.7rem, 1.2vw, 0.9rem);  
+
+    position: absolute;
+    top: 0%;
+
+    padding: 0.6em 1em;
+    border-radius: 1em 1em 0 0;
+
+    transform: translateY(-100%);
 }
 
-.folder-1 section{ /* folder */
-    padding-top: 3rem;
-
+.folder-1 section{ /* Folder */
     background-color: var(--backgroundFolderOne);
     color: var(--textFolderOne);
-    border-radius: 0 6px 6px 6px;
 
-    padding: 1em 2em;
+    padding: 3em 2em 1em 2em;
+    border-radius: 0 0.5em 0.5em 0.5em;
 }
 
 /* ----------------- FOLDER 2 -----------------*/
@@ -303,47 +302,44 @@ header{
 .folder-2{
     position: relative;
     z-index: 2;
+
     margin-top: 4em;
 }
 
-.folder-2 h3{ /* tab */
-    position: absolute;
-    top: 0%;
-    transform: translateY(-90%);
-    left: 10%;
-
+.folder-2 h3{ /* Tab */
     background-color: var(--backgroundFolderTwo);
     text-transform: var(--textUppercase);
     color: var(--textFolderTwo);
-
-    padding: 0.6em 1em;
-    font-weight: bold;
-
-    border-radius: 12px 12px 0 0;
     font-family: var(--mainTextFont);
     font-size: clamp(0.7rem, 1.2vw, 0.9rem); 
+
+    position: absolute;
+    top: 0%;
+    left: 10%;
+
+    padding: 0.6em 1em;
+    border-radius: 0.5em 0.5em 0 0;
+
+    transform: translateY(-90%);
 }
 
-.folder-2 section{ /* folder */
-    padding-top: 3rem;
-
+.folder-2 section{ /* Folder */
     background-color: var(--backgroundFolderTwo);
     color: var(--textFolderTwo);
 
-    border-radius: 6px;
-
-    padding: 1em 2em;
+    padding: 3em 2em 1em 2em;
+    border-radius: 0.5em;
 }
 
 .folder-2 section ul{
-    margin: 0.5em 3em;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: clamp(1rem, 3vw, 3rem);
+
+    margin: 0.5em 3em;
 }
 
-/* To make items appear at a random place */
+/* Om de items op een willekeurige plek te laten verschijnen */
 .folder-2 section ul li{
     list-style: none;
 }
@@ -357,56 +353,52 @@ header{
 .folder-3{
     position: relative;
     z-index: 11;
+
     margin-top: 6em;
 }
 
-.folder-3 h3{ /* tab */
-    position: absolute;
-    top: 0%;
-    left: 28%;
-    transform: translateY(-90%);
-    padding-top: 3em;
-
+.folder-3 h3{ /* Tab */
     background-color: var(--backGroundFolderThree);
     text-transform: var(--textUppercase);
     color: var(--textFolderThree);
-
-    padding: 0.6em 1em;
-    font-weight: bold;
-
-    border-radius: 12px 12px 0 0;
     font-family: var(--mainTextFont);
     font-size: clamp(0.7rem, 1.2vw, 0.9rem); 
+
+    position: absolute;
+    top: 0%;
+    left: 28%;
+
+    padding: 1em 1em 0.6em 1em;
+    border-radius: 0.5em 0.5em 0 0;
+
+    transform: translateY(-90%);
 }
 
-.folder-3 section{ /* folder */
-    padding-top: 3rem;
-
+.folder-3 section{ /* Folder */
     background-color: var(--backGroundFolderThree);
     color: var(--textFolderThree);
+
     position: relative;
-
-    border-radius: 6px;
-
-    min-height: 60vh;
     height: auto;
+    min-height: 60vh;
 
-    padding: 1em 2em;
+    padding: 3em 2em 1em 2em;
+    border-radius: 0.5em;
 }
+
 /* ---------------------------------------------------------------------------------------- MARK: ABOUT ME
 */
 
 .about-me{
+    color: var(--mainTekstColor);
+
     display: flex;
     flex-direction: column;
     gap: clamp(1.5rem, 4vw, 3rem);
 
     margin: clamp(1.5rem, 5vw, 5rem);
     border-left: 1px solid var(--line);
-
     height: auto;
-
-    color: var(--mainTekstColor);
 
     /* Fade In */
     @media (prefers-reduced-motion: no-preference){
@@ -564,7 +556,6 @@ header{
 
     min-height: var(--minimumHeightImages);
     transform-origin: 50% 50%;
-    /* transform: var(--transformImagesWrapper); */
     transform: var(--wrapper-transform) var(--parallax-transform);
     transition: 1s;
 }
@@ -574,22 +565,30 @@ body:not(.other-theme) .img-wrapper:hover{
 }
 
 .other-theme .horizontal-scroll-wrapper{
+    display: flex;
+    justify-content: center;
+
     width: 100%;
-    max-width: 100vw;
-    margin: 35em 4.3em; 
+    max-width: 90vw;
+    margin: 35em auto; 
+
+    transform: none;
 }
 
 .other-theme .horizontal-scroll-wrapper img{
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     display: block;
+    transform: none;
+
+    width: 100%;
+    height: 100%;
 }
 
 .other-theme .img-wrapper{
     flex: 0 0 320px;  
     height: 300px;
     overflow: hidden;
+    transform: none;
 }
 
 .slower{
@@ -628,7 +627,7 @@ body:not(.other-theme) .img-wrapper:hover{
     --parallax-transform: var(--transformLast);
 }
 
-.neutral{ /* Not in root because nothing transforms, this was needed for the neutral images to not be rotated*/
+.neutral{ /* Niet in de root gezet omdat er niks draait */
     --parallax-transform: translateZ(0px);
 }
 
@@ -722,9 +721,10 @@ body:not(.other-theme) .img-wrapper:hover{
 }
 
 .classmates .classmate-item li{
-    list-style: none;
     color: var(--mainTextColor);
     text-transform: capitalize; /* Om elke eerste letter van de data uit de API een hoofdletter te geven. Iris had dit bijvoorbeeld niet gedaan */
+
+    list-style: none;
 }
 
 .classmates .output-styling{
@@ -753,12 +753,12 @@ body:not(.other-theme) .img-wrapper:hover{
 }
 
 .back-to-top{
+    font-family: var(--normalFont);
+    color: var(--mainTextColor);
+
     display: flex;
     justify-content: center;
     margin-bottom: 5em;
-
-    font-family: var(--normalFont);
-    color: var(--mainTextColor);
 
     cursor: pointer;
 }
