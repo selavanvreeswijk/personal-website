@@ -65,6 +65,9 @@ Er zijn flinke stappen gemaakt vandaag. Samen met Teun ben ik de ochtend begonne
 <img alt="Screenshot 2026-02-11 at 15 57 44" src="https://github.com/user-attachments/assets/31b455a5-a68e-4f23-a0c8-7a0a1a6424f5" />
 <img alt="Screenshot 2026-02-11 at 15 57 56" src="https://github.com/user-attachments/assets/a58cf92c-2f50-4dc6-84d2-ab6aae38ed88" />
 
+Woensdagavond
+
+# Donderdag
 
 </details>
 
