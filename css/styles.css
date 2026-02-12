@@ -684,7 +684,7 @@ body:not(.other-theme) .img-wrapper:hover{
 
     width: min(1200px, 90%);
     margin-inline: auto;
-    margin-top: clamp(4em, 8vw, 10em);
+    margin-top: clamp(9em, 10vw, 10em);
     margin-bottom: clamp(4em, 10vw, 13em);
 
     @media (prefers-reduced-motion: no-preference){
