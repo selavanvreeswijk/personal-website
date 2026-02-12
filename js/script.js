@@ -1,6 +1,5 @@
-// Because I'm using a lot of scroll animations, my site reloaded the wrong way. After trying for a long time I came to this conslusion with chat
-// Source: chatGPT. Prompt: ...
-
+// Omdat ik een aantal scrollanimaties heb, wilde mijn site niet goed laden. Uiteindelijk kwam ik hierop met chatGPT
+// Source: chatGPT. Prompt: Mijn prompt was mijn code en waarom alle content omhoog versprong bij het laden van de pagina
 history.scrollRestoration = "manual";
 
 window.addEventListener('load', () => {
@@ -8,7 +7,7 @@ window.addEventListener('load', () => {
 });
 
 const folders = document.querySelectorAll('article');
-const randomLijst = document.querySelector('.folder-2 section ul')
+const randomLijst = document.querySelector('.folder-2 section ul');
 const nameContainer = document.querySelector('#person-321-name');
 const dataContainer = document.querySelector('#person-321-data');
 
@@ -32,11 +31,10 @@ window.addEventListener('scroll', () => {
 
 // API
 
- window.addEventListener('load', () => {
-    insertCharacters();
-});
+insertCharacters();
+
 async function insertCharacters() {
-    // Bron; chatGPT voor het ophalen van vier specifeke ID's. Hiervoor had ik alleen mijn eigen opgehaald. 
+    // Bron: chatGPT voor het ophalen van vier specifeke ID's. Hiervoor had ik alleen mijn eigen (succesvol) opgehaald. 
     // Mijn prompt: Ik haal nu op deze manier met JS een persoon op uit de API. Ik wil echter nu drie andere personen ophalen. Hoe kan ik dat aanpakken qua code?
     const ids = [321, 305, 298, 291];
     const url = `https://fdnd.directus.app/items/person?filter[id][_in]=${ids.join(',')}`;
@@ -47,11 +45,11 @@ async function insertCharacters() {
 
     persons.forEach(person => {
 
-        // Me
+        // Ik
         if (person.id === 321) {
 
-            // Animation typewriter
-            // Source: https://www.w3schools.com/howto/howto_js_typewriter.asp
+            // Animatie Typewriter
+            // Bron: https://www.w3schools.com/howto/howto_js_typewriter.asp
             nameContainer.textContent = person.name;
 
             function typeWriter(text, element, speed = 50){
@@ -63,11 +61,11 @@ async function insertCharacters() {
                         element.textContent += text.charAt(i);
                         i++;
                         setTimeout(typing, speed);
-                    }
-                }
+                    };
+                };
 
                 typing();
-            }
+            };
 
             typeWriter(person.name, nameContainer, 70);
 
@@ -79,7 +77,7 @@ async function insertCharacters() {
             `;
         };
 
-        // Classmates
+        // Klasgenoten
         if (person.id === 305 || person.id === 298 || person.id === 291) {
 
             const container = document.querySelector(`#person-${person.id}`);
@@ -103,14 +101,18 @@ async function insertCharacters() {
 
 // Random lijst folder 2 
 
-for (let i = randomLijst.children.length; i >= 0; i--) {
-    randomLijst.appendChild(randomLijst.children[Math.random() * i | 0]);
+const items = randomLijst.children;
+
+for (let i = items.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+
+    randomLijst.appendChild(items[randomIndex]);
 }
 
-// Ander theme
+// Ander thema
 
-const theme = document.querySelector('.theme-toggle')
-let lightMode = true
+const theme = document.querySelector('.theme-toggle');
+let lightMode = true;
 
 theme.addEventListener('click', () => {
 
