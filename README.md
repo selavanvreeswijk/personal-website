@@ -1,16 +1,8 @@
 
 Leerdoelen:
-- Websites met attention to detail. Zowel vormgeving en interactie
-- Toffe animaties coderen + met SVG spelen
-- JavaScript beter begrijpen
-
-TEMPLATE
-#### Wat heb ik vandaag gedaan?
-#### Hoe lang duurde het?
-#### Wat heb ik geleerd?
-#### Wat ga ik morgen doen?
-
-Kort tekstje, min of meer als een dagboek. 
+- Websites met attention to detail. Zowel dat de vormgeving en interactie naadloos op elkaar aansluit. Dingen als micro-interacties, consistente spacing, typografie. 
+- Complexe animaties coderen met CSS en JavaScript. Ook hoe ik SVG's hiervoor zou kunnen inzetten.
+- Mijn begrip van JavaScript veridepen. Meer en beter begrijpen wat er op de achtergrond gebeurd. Dat ik zelfstandiger logica kan opbouwen en interactieve functies zelf kan bedenken en uitwerken. 
 
 ## Weken
 
@@ -69,6 +61,10 @@ Woensdagavond heb ik de website responsive gemaakt en veel finetunen gedaan. Din
 
 ### Donderdag
 Donderdagochtend heb ik een laatste keer mijn code doorgelopen en aangepast zo ver de tijd dat toeliet. Hier ben ik drie uur mee bezig geweest, en was ik langer mee bezig als ik meer tijd had. 
+
+### Week 2 verslag 
+
+Volgt nog.
 
 </details>
 
