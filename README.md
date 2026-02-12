@@ -65,11 +65,29 @@ Er zijn flinke stappen gemaakt vandaag. Samen met Teun ben ik de ochtend begonne
 <img alt="Screenshot 2026-02-11 at 15 57 44" src="https://github.com/user-attachments/assets/31b455a5-a68e-4f23-a0c8-7a0a1a6424f5" />
 <img alt="Screenshot 2026-02-11 at 15 57 56" src="https://github.com/user-attachments/assets/a58cf92c-2f50-4dc6-84d2-ab6aae38ed88" />
 
-Woensdagavond
+Woensdagavond heb ik de website responsive gemaakt en veel finetunen gedaan. Dingen als de typewriter functie, clamp goed leren gebruiken & toepassen en andere animaties. Hier ben ik ongeveer vier uur mee bezig geweest. 
 
-# Donderdag
+### Donderdag
+Donderdagochtend heb ik een laatste keer mijn code doorgelopen en aangepast zo ver de tijd dat toeliet. Hier ben ik drie uur mee bezig geweest, en was ik langer mee bezig als ik meer tijd had. 
 
 </details>
 
+<details><summary>Bronnenlijst</summary>
+
+## Bronnen
+
+Folders scroll inspiratie: https://nitro.framer.website/
+
+Horizontale scroll: https://codepen.io/Sela-van-Vreeswijk/pen/GgqwRBm?editors=1000 
+
+Clamp leren gebruiken: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp 
+
+History Scroll Rotation in JavaScript: chatGPT. Mijn prompt was mijn code en waarom alle content omhoog versprong bij het laden van de pagina. 
+
+Het ophalen van specifieke ID's: chatGPT. Mijn prompt: Ik haal nu op deze manier met JS een persoon op uit de API. Ik wil echter nu drie andere personen ophalen. Hoe kan ik dat aanpakken qua code?
+
+Animatie Typewriter: https://www.w3schools.com/howto/howto_js_typewriter.asp
+
+</details>
 
 
