@@ -64,7 +64,13 @@ Donderdagochtend heb ik een laatste keer mijn code doorgelopen en aangepast zo v
 
 ### Week 2 verslag 
 
-Volgt nog.
+Dit was een intense week, maar ik ben blij met het eindresultaat. Ik had moeite met me te focussen de maandag en dinsdag, wat in principe prima is alleen niet bij een project waar je weinig tijd hebt. Ik heb het idee dat ik hierdoor veel tijd ben verloren. Woensdag ben ik vervolgens ergens anders gaan zitten en heb ik mijn oortjes op noise cancelling gedaan, dat hielp al een hoop. Ik werk het beste in een omgeving waar het compleet stil is, en alleen dus ik moet even wennen aan op deze manier werken. Komt met de tijd, het is in ieder geval wel gezellig en leuk ook om samen aan opdrachten te werken en elkaar te helpen. Ik heb uiteindelijk woensdag nog na de les aan de website gewerkt en ben blij met het eindresultaat, maar het voelde alsof ik nu op een punt was waar ik meer kon doen en kleine dingen als animaties meer kon oppakken - maar de tijd was nu op. Ik heb wel veel geleerd dit project. Ik moest er even inkomen omdat ik al meer dan een jaar nauwelijks met code heb gewerkt, maar dat lukte gelukkig. Tijdens dit project heb ik me vooral gefocust op het design en ik vond het leuk om daar meer tijd aan te besteden en iets te maken wat ik écht mooi vond. De kleuren, typografie en padding bijvoorbeeld. Woensdag heb ik nog geleerd over clamp voor het responsive maken voor een website en dat was heel interessant. Mooi om responsiveness zo te kunnen toepassen.
+
+<img alt="Screenshot 2026-02-16 at 11 58 45" src="https://github.com/user-attachments/assets/ef0c6731-5736-4970-b350-146fefb87960" />
+<img alt="Screenshot 2026-02-16 at 11 58 58" src="https://github.com/user-attachments/assets/4b5b2238-6164-47aa-b729-33d89c572558" />
+<img alt="Screenshot 2026-02-16 at 11 59 11" src="https://github.com/user-attachments/assets/f531fd54-1d0e-413b-9a68-8e080122b2f1" />
+<img alt="Screenshot 2026-02-16 at 11 59 25" src="https://github.com/user-attachments/assets/1b41289e-d697-4638-a9b8-1ede818e8c1a" />
+<img alt="Screenshot 2026-02-16 at 11 58 32" src="https://github.com/user-attachments/assets/ecd0e3f4-601c-4a4b-95cd-1d3e072050e2" />
 
 </details>
 
