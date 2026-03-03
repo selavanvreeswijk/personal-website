@@ -5,764 +5,300 @@
 }
 
 @font-face{ 
-    font-family:'Arnhem';
-    src: url('../fonts/arnhem.woff2') format('truetype');
+    font-family:'Roboto Regular';
+    src: url('../fonts/roboto-regular.woff2') format('woff2');
 }
 
 @font-face{ 
-    font-family:'Swiss';
-    src: url('../fonts/swiss.woff2') format('truetype');
-}
-
-@font-face{ 
-    font-family:'Lato';
-    src: url('../fonts/lato.woff2') format('truetype');
-}
-
-:root{
-    /* Kleuren */
-    --mainBackground: #777162;
-    --backgroundFolderOne: #969080;
-    --textFolderOne: #3f3e2c;
-    --backgroundFolderTwo: #211e15;
-    --textFolderTwo: #dbd2b7;
-    --backGroundFolderThree: #c1b6a4;
-    --textFolderThree: #1b150b;
-    --mainTextColor: #FAFAF7;
-    --mainTextColorOtherTheme: #d8d6cf;
-    --line: #D6D4CB;
-    
-    /* Typografie */
-    --normalFont: 'Arnhem', sans-serif; 
-    --fancyFont: 'Swiss', sans-serif;
-    --arnhemFont: 'Arnhem', sans-serif;
-    --mainTextFont: 'Lato', sans-serif;
-
-    /* Horizontale Scroll */
-    --imagesTransform: rotate(-90deg) translateX(-100%);
-    --wrapper-transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
-    --parallax-transform: none;
-
-    --transformSlower: translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
-    --transformSlower1: translateZ(-.25px) scale(1.05) translateX(0%) translateY(8vh);
-    --transformSlower2: translateZ(-.3px) scale(1.3) translateX(0%) translateY(2vh);
-    --transformSlowerDown: translateZ(-.2px) scale(1.1) translateX(0%) translateY(16vh);
-    --transformFaster: translateZ(.15px) scale(0.8) translateX(0%) translateY(14vh);  
-    --transformFaster1: translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh);
-    --transformFastest: translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh);
-    --transformVertical: translateZ(-.15px) scale(1.15) translateX(0%) translateY(0%);
-    --transformLast: translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh);
-
-    /* Layout */
-    --imageWidth: 100vh; /* vh & vw omgedraaid is nodig voor de horizontale scroll door de rotatie, ze draaien om */
-    --imageHeight: 100vw;
-    --imagesOverflowY: auto;
-    --imagesOverflowX: hidden;
-    --flexDirection: column;
-    --minimumHeightImages: 40vh;
-    --flexWrap: nowrap;
-    --sticky: sticky;
-    --folder-shift: 24vh;
-
-    /* Styling */
-    --imageFilter: grayscale(0%);
-    --hoverToTop: pink;
-    --textUppercase: uppercase;
-    --opacity: opacity;
-
-    /* Animaties */
-    --animationNameText: texts;
-    --animationNameImage: imageAboutMe;
-}
-
-.other-theme{
-    /* Kleuren */
-    --mainBackground: white;
-    --backgroundFolderOne: black;
-    --textFolderOne: white;
-    --backgroundFolderTwo: black;
-    --textFolderTwo: white;
-    --backGroundFolderThree: black;
-    --textFolderThree: white;
-    --mainTextColor: black;
-    --mainTextColorOtherTheme: black;
-
-    /* Typografie */   
-    --normalFont: sans-serif;
-    --fancyFont: sans-serif;
-    --arnhemFont: sans-serif;
-
-    /* Horizontale Scroll */   
-    --transformImagesWrapper: none;
-    --minimumHeightImages: auto;
-
-    /* Layout */
-    --opacity: none;
-    --sticky: none;
-    --imageWidth: 100%;
-    --imageHeight: auto;
-    --imagesTransform: none;
-    --imagesOverflowY: visible;
-    --imagesOverflowX: visible;
-    --flexDirection: row;
-    --flexWrap: wrap;
-
-    /* Styling */
-    --imageFilter: grayscale(100%);
-    --hoverToTop: grey;
-    --textUppercase: none;
-
-    /* Animaties */
-    --animationNameText: none;
-    --animationNameImage: none;
+    font-family:'Roboto Medium';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
 }
 
 /* --------------------------------------------------------------------------------- MARK: GENERAL 
 */
 
-h1{
-    font-family: var(--fancyFont);
-    color: var(--mainTextColor);
-    /* Anders waren de letters te dik vanuit het font */
-    font-weight: 1;
-    letter-spacing: 0.01em;
+:root{
+    /* Backgrounds */
+    --color-background: #ffffff;
+    --input-background:#ffffff;
+    --form-background: #e6e6e9;
+    --ns-yellow:#ffc710;
 
-    /* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp */
-    font-size: clamp(2rem, 6vw, 4.5rem); 
+    /* Content */
+    --color-content-default: #1f2937; /* gray.800 */
+    --color-content-default-inverse: #ffffff;
 
-    display: inline-block;
+    --color-content-emphasis: #003082; /* blue.700 */
+    --color-content-subtle: rgba(0, 0, 0, 0.5); /* alpha.black.500 */
+    --color-content-placeholder: rgba(0, 0, 0, 0.4);
 
-    position: relative;
+    /* Interactive */
+    --color-content-interactive-hover: #003e99; /* blue.600 */
+    --color-content-interactive-pressed: #002b66; /* blue.700 */
+    --color-content-interactive-default-inverse: #ffffff;
 
-    animation: colorChange 4s ease-in-out infinite alternate;
+    /* Status */
+    --color-content-info: #0052cc;
+    --color-content-success: #2e7d5b; /* green.600 */
+    --color-content-warning: #ea580c; /* orange.500 */
+    --color-content-error: #d90429; /* red.600 */
+    --color-content-error-inverse: #f28b94;
+
+    /* Destructive */
+    --color-content-destructive-default: #d90429;
+    --color-content-destructive-hover: #b00020;
+    --color-content-destructive-pressed: #8a0018;
+
+    /* Borders & inputs */
+    --help-text: #6B7280;
+    --color-border-input: #d1d5db;
+    --color-background-input: #ffffff;
+
+    /* Accent combinations */
+    --color-content-on-accent-subtle: rgba(0, 0, 0, 0.68);
+    --color-content-on-accent-yellow-default: rgba(0, 0, 0, 0.6);
+
+    /* Logo */
+    --color-content-logo: #003082;
 }
 
-@keyframes colorChange{
+/*Nog instellen*/
 
-  0% {
-    color: var(--mainTextColor);
-  }
+/* .dark-theme{
+    --background-color:#0B0F19;
+    --label: #FFFFFF;
+    --help-text: #9CA3AF;
+    --input-border: #374151;
+    --input-background:#111827;
+} */
 
-  100% {
-    color: var(--mainTextColorOtherTheme);
-  }
+.dark{
+    --color-background: #0b0f19;
 
-}
+    --color-content-default: #e5e7eb;           /* gray.200 */
+    --color-content-default-inverse: #111827;
 
-h2{
-    color: var(--mainTextColor);
-    font-family: var(--arnhemFont);
+    --color-content-emphasis: #ffffff;
+    --color-content-subtle: rgba(255, 255, 255, 0.5);
+    --color-content-placeholder: rgba(255, 255, 255, 0.4);
 
-    font-size: clamp(0.95rem, 2vw, 1.1rem); 
-}
+    --color-content-interactive-default: #3b82f6; /* blue.400 */
+    --color-content-interactive-hover: #60a5fa;   /* blue.300 */
+    --color-content-interactive-pressed: #93c5fd; /* blue.200 */
+    --color-content-interactive-default-inverse: #1e3a8a;
 
-h3{
-    font-family: var(--fancyFont);
-    color: var(--mainTextColor);
-    font-weight: 1;
+    --color-content-selected: #ffffff;
 
-    font-size: clamp(2rem, 3.5vw, 4.5rem); 
-}
+    --color-content-info: #3b82f6;
+    --color-content-success: #4ade80;   /* green.300 */
+    --color-content-warning: #fb923c;   /* orange.400 */
+    --color-content-error: #f87171;     /* red.400 */
+    --color-content-error-inverse: #b00020;
 
-h4{
-    font-family: var(--fancyFont);
-    font-weight: 1;
+    --color-content-destructive-default: #f87171;
+    --color-content-destructive-hover: #ef4444;
+    --color-content-destructive-pressed: #dc2626;
 
-    font-size: clamp(1.8rem, 3vw, 4rem); 
-}
+    --color-border-input: #374151;
+    --color-background-input: #111827;
 
-p{
-    color: var(--mainTextColor);
-    font-family: var(--mainTextFont);
+    --color-content-on-accent-subtle: #ffffff;
+    --color-content-on-accent-yellow-default: #1f2937;
 
-    font-size: clamp(0.7rem, 1.2vw, 0.9rem); 
-}
-
-li{
-    font-family: var(--mainTextFont);
-    font-size: clamp(0.8rem, 1.2vw, 1rem); 
+    --color-content-logo: #facc15; /* yellow.400 */
 }
 
 body{
-    background-color: var(--mainBackground);
-}
+    background-color: var(--ns-yellow);
 
-ul{
-  list-style-type: '- ';
+    font: 'Roboto Regular';
+    font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1rem);
+    line-height: 1.5;
 }
-
-img{
-    filter: var(--imageFilter);
-}
-
-/* ---------------------------------------------------------------------------------------- MARK: HEADER 
-*/
 
 header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color: var(--color-content-error);
 
-    height: 100vh;
-}
-
-/* ---------------------------------------------------------------------------------------- MARK: MAIN 
-*/
-
-.static{ /* Titels */
-    position: absolute;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    padding: 0.1em 0.6em;
-    top: 0.5em;
-    width: 100%;
-
-    @media (prefers-reduced-motion: no-preference){
-        animation-name: opacity;
-        animation-range: entry contain;
-        animation-fill-mode: both;
-        animation-timeline: view();
-    }
-}
-
-.static h2:nth-of-type(1){
-    text-transform: var(--textUppercase);
-}
-
-/* ---------------------------------------------------------------------------------------- MARK: FOLDERS 
-*/
-
-.container{ /* Container Folders */
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container article{  /* Individuele Folder */
-    position: relative;
-
-    transition: transform 2s ease;     
-}
-
-.container article section{  /* Inhoud Folder */
-    width: 95vw;
-    padding: 0.5em 1em 1.5em 1em;
-}
-
-/* Folders scrollen omhoog */
-
-/* Bron: chatGPT om de folders responsive te maken */
-.folder-2.active{
-  transform: translateY(calc(-1 * var(--folder-shift)));
-}
-
-.folder-3.active{
-  transform: translateY(calc(-2.485 * var(--folder-shift)));
-}
-
-/* ----------------- FOLDER 1 -----------------*/
-/* Ik heb deze styling bewust per folder gedaan omdat het folder specifiek is */
-
-.folder-1{
-    position: relative;
-}
-
-.folder-1 h3{ /* Tab */
-    background-color: var(--backgroundFolderOne);
-
-    color: var(--textFolderOne);
-    text-transform: var(--textUppercase);
-    font-family: var(--mainTextFont);
-    font-size: clamp(0.7rem, 1.2vw, 0.9rem);  
-
-    position: absolute;
-    top: 0%;
-
-    padding: 0.6em 1em;
-    border-radius: 1em 1em 0 0;
-
-    transform: translateY(-100%);
-}
-
-.folder-1 section{ /* Folder */
-    background-color: var(--backgroundFolderOne);
-    color: var(--textFolderOne);
-
-    padding: 3em 2em 1em 2em;
-    border-radius: 0 0.5em 0.5em 0.5em;
-}
-
-/* ----------------- FOLDER 2 -----------------*/
-
-.folder-2{
-    position: relative;
-    z-index: 2;
-
-    margin-top: 4em;
-}
-
-.folder-2 h3{ /* Tab */
-    background-color: var(--backgroundFolderTwo);
-    text-transform: var(--textUppercase);
-    color: var(--textFolderTwo);
-    font-family: var(--mainTextFont);
-    font-size: clamp(0.7rem, 1.2vw, 0.9rem); 
-
-    position: absolute;
-    top: 0%;
-    left: 10%;
-
-    padding: 0.6em 1em;
-    border-radius: 0.5em 0.5em 0 0;
-
-    transform: translateY(-90%);
-}
-
-.folder-2 section{ /* Folder */
-    background-color: var(--backgroundFolderTwo);
-    color: var(--textFolderTwo);
-
-    padding: 3em 2em 1em 2em;
-    border-radius: 0.5em;
-}
-
-.folder-2 section ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(1rem, 3vw, 3rem);
-
-    margin: 0.5em 3em;
-}
-
-/* Om de items op een willekeurige plek te laten verschijnen */
-.folder-2 section ul li{
-    list-style: none;
-}
-
-.folder-2 section ul li:nth-child(3n){
-    justify-self: center;
-}
-
-/* ----------------- FOLDER 3 -----------------*/
-
-.folder-3{
-    position: relative;
-    z-index: 11;
-
-    margin-top: 6em;
-}
-
-.folder-3 h3{ /* Tab */
-    background-color: var(--backGroundFolderThree);
-    text-transform: var(--textUppercase);
-    color: var(--textFolderThree);
-    font-family: var(--mainTextFont);
-    font-size: clamp(0.7rem, 1.2vw, 0.9rem); 
-
-    position: absolute;
-    top: 0%;
-    left: 28%;
-
-    padding: 1em 1em 0.6em 1em;
-    border-radius: 0.5em 0.5em 0 0;
-
-    transform: translateY(-90%);
-}
-
-.folder-3 section{ /* Folder */
-    background-color: var(--backGroundFolderThree);
-    color: var(--textFolderThree);
-
-    position: relative;
-    height: auto;
-    min-height: 60vh;
-
-    padding: 3em 2em 1em 2em;
-    border-radius: 0.5em;
-}
-
-/* ---------------------------------------------------------------------------------------- MARK: ABOUT ME
-*/
-
-.about-me{
-    color: var(--mainTekstColor);
-
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 4vw, 3rem);
-
-    margin: clamp(1.5rem, 5vw, 5rem);
-    border-left: 1px solid var(--line);
-    height: auto;
-
-    /* Fade In */
-    @media (prefers-reduced-motion: no-preference){
-        animation-name: var(--opacity);
-        animation-range: entry contain;
-        animation-fill-mode: both;
-        animation-timeline: view();
-    }
-}
-
-.about-me div{
-    margin-left: 1em;
-}
-
-.about-me div p{
-    padding-top: 1em;
-    padding-right: 3em;
-    max-width: 60ch;  
-}
-
-.about-me img{
-    width: 100%;
-    height: auto;
-    position: relative;
-	object-fit: cover;
-
-    img{
-         aspect-ratio: 1;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-        animation-name: var(--animationNameImage);
-        animation-range: entry contain;
-        animation-fill-mode: both;
-        animation-timeline: view();
-    } 
-}
-
-@media (min-width: 600px){
-
-    .about-me{
-        gap: clamp(2rem, 5vw, 4rem);
-        margin: clamp(2rem, 6vw, 6rem);
-    }
-
-    .about-me img{
-        width: 80%;
-        margin: 0 auto;
-        height: auto;
-        padding-left: 0;
-        position: relative;  
-    }
-}
-
-@media (min-width: 900px){
-
-    .about-me{
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .about-me img{
-        flex: 1;
-        max-height: 60vh;
-        object-fit: cover;
-
-        position: var(--sticky);
-        top: 15vh;
-        padding-left: 3em;
-    }
-}
-
-@keyframes imageAboutMe{
-
-    from{
-        opacity: 0;
-        transform: translateX(15em)
-    }
-
-    to{
-        opacity: 1;
-        transform: translateX(0em)
-    }
-
-}
-
-@keyframes opacity{
-
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-
-}
-
-@media (min-width: 414px){
-
-    .about-me div{
-        margin-left: 0.5em;
-        margin-right: 0.5em;  
-    }
- 
-}
-
-@media (min-width: 798px){
-
-    .about-me div{
-        margin-left: 1em;
-        margin-right: 1em;  
-    }
- 
-}
-
-/* ------------------------------------------------------------------------------------------ MARK: GALLERY FOTO'S 
-*/
-
-::-webkit-scrollbar{
-    width: 1px;
-    height: 1px;
-}
-
-.horizontal-scroll-wrapper{
-    display: flex;
-    flex-direction: var(--flexDirection);
-    flex-wrap: var(--flexWrap);
-    gap: 2em;
-    margin-top: clamp(6em, 15vh, 30em);
-
-    width: var(--imageWidth);
-    height: var(--imageHeight);
-
-    transform: var(--imagesTransform);
-    transform-origin: top left;
-    overflow-y: var(--imagesOverflowY);
-    overflow-x: var(--imagesOverflowX);
-    perspective: 1px;
-    transform-style: preserve-3d;
-}
-
-.horizontal-scroll-wrapper img{
-    max-width: 45vh;
-    max-height: 50vh;
-
-    transition: 0.5s;
-    vertical-align: top;
-}
-
-.img-wrapper{
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-
-    min-height: var(--minimumHeightImages);
-    transform-origin: 50% 50%;
-    transform: var(--wrapper-transform) var(--parallax-transform);
-    transition: 1s;
-}
-
-body:not(.other-theme) .img-wrapper:hover{
-    min-height: 65vh;
-}
-
-.other-theme .horizontal-scroll-wrapper{
     display: flex;
     justify-content: center;
 
-    width: 100%;
-    max-width: 90vw;
-    margin: 35em auto; 
-
-    transform: none;
+    margin-top: 0.5em;
 }
 
-.other-theme .horizontal-scroll-wrapper img{
-    object-fit: cover;
-    display: block;
-    transform: none;
-
-    width: 100%;
-    height: 100%;
+main section:first-of-type{
+    margin: 0.5em;
 }
 
-.other-theme .img-wrapper{
-    flex: 0 0 320px;  
-    height: 300px;
-    overflow: hidden;
-    transform: none;
-}
-
-.slower{
-    --parallax-transform: var(--transformSlower);
-}
-
-.slower1{
-    --parallax-transform: var(--transformSlower1);
-}
-
-.slower2{
-    --parallax-transform: var(--transformSlower2);
-}
-
-.slower-down{
-    --parallax-transform: var(--transformSlowerDown);
-}
-
-.faster{
-    --parallax-transform: var(--transformFaster);
-}
-
-.faster1{
-    --parallax-transform: var(--transformFaster1);
-}
-
-.fastest{
-    --parallax-transform: var(--transformFastest);
-}
-
-.vertical{
-    --parallax-transform: var(--transformVertical);
-}
-
-.last{
-    --parallax-transform: var(--transformLast);
-}
-
-.neutral{ /* Niet in de root gezet omdat er niks draait */
-    --parallax-transform: translateZ(0px);
-}
-
-@media (max-width: 768px){
-
-    .horizontal-scroll-wrapper{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        width: 100%;
-        height: auto;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        transform: none;
-        perspective: none;
-        transform-style: flat;
-
-        margin: 6em 1.5em 4em 1.5em;
-
-        scroll-snap-type: x mandatory;
-    }
-
-    .img-wrapper{
-        flex: 0 0 clamp(220px, 70vw, 320px);
-        height: clamp(220px, 60vw, 300px);
-
-        transform: none;
-        min-height: auto;
-
-        scroll-snap-align: start;
-    }
-
-    .horizontal-scroll-wrapper img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    body:not(.other-theme) .img-wrapper:hover{
-        min-height: auto;
-    }
-}
-
-/* --------------------------------------------------------------------------------------- MARK: API CLASSMATES  
-*/
-
-.classmates{
+fieldset{
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    width: min(1200px, 90%);
-    margin-inline: auto;
-    margin-top: clamp(9em, 10vw, 10em);
-    margin-bottom: clamp(4em, 10vw, 13em);
-
-    @media (prefers-reduced-motion: no-preference){
-        animation-name: var(--opacity);
-        animation-range: entry contain;
-        animation-fill-mode: both;
-        animation-timeline: view(); 
-    }
 }
 
-.classmates .classmate-item{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-
-    width: 100%;
-    gap: 3em;
-    margin-top: 3em;
+button{
+    margin: 1em auto;
+    padding: 0.2em 0.5em;
 }
 
-.classmates .classmate-item img{
-    width: 100%;
-    max-width: 320px;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-
-    margin-bottom: clamp(0.75em, 2vw, 1em);
+h1{
+    color: var(--color-content-emphasis);   
+    font: 'Roboto Medium';
+    font-size: clamp(1.375rem, 1.125rem + 0.8333vi, 1.75rem);
+    padding-top: 0.5em;
 }
 
-.classmates .classmate-item ul{
-    margin-top: 1.5em;
+/* h2{
+  font-size: clamp(1.25rem, 1.0833rem + 0.5556vi, 1.5rem);
+} */
+
+legend{
+    font-size: clamp(1.125rem, 1.0417rem + 0.2778vi, 1.25rem);
+    color: var(--color-content-info);
+}
+
+input,
+select,
+textarea{
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-content-info);
+}
+
+main section p{
+    color: var(--color-content-info);
+    font-size: 1rem;
+}
+
+button{
+    background-color: var(--color-content-emphasis);
+    color: var(--color-background);
+    border-radius: 6px;
+    padding: 2em 4em;
+}
+
+label,
+legend{
+    font-family: 'Roboto Regular';
+}
+
+main{
+    background-color: var(--form-background);
+    border-radius: 6px;
+
+    margin: 0.5em 0.4em;
+}
+
+/* --------------------------------------------------------------------------------- MARK: FORMS 
+*/
+
+input[type="text"],
+input[type="number"],
+input[type="date"]{
+  padding: 16px;
+  border: 1px solid var(--color-border-input);
+  background-color: var(--color-background-input);
+  color: var(--color-content-subtle);
+  font-size: 16px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+fieldset{
+    background-color: var(--color-background);
+    border-radius: 6px;
+    border: var(--color-border-input);
+
+    margin: 0.7em;
+
+    border: none;
     padding: 0;
 }
 
-.classmates .classmate-item li{
-    color: var(--mainTextColor);
-    text-transform: capitalize; /* Om elke eerste letter van de data uit de API een hoofdletter te geven. Iris had dit bijvoorbeeld niet gedaan */
-
-    list-style: none;
-}
-
-.classmates .output-styling{
-    font-weight: 100;
-}
-
-@media (max-width: 900px){
-    .classmates .classmate-item{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .classmates .classmate-item img{
-        max-width: 260px;
-    }
-}
-
-@media (max-width: 500px){
-    .classmates .classmate-item{
-        gap: 2em;
-    }
-
-    .classmates .classmate-item img{
-        max-width: 220px;
-    }
-}
-
-.back-to-top{
-    font-family: var(--normalFont);
-    color: var(--mainTextColor);
-
+label{
     display: flex;
-    justify-content: center;
-    margin-bottom: 5em;
-
-    cursor: pointer;
+    flex-direction: column;
+    margin-bottom: 12px;
 }
 
-.back-to-top:hover{
-    color: var(--hoverToTop);
+/* Radio buttons */
+
+.radio{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radio input[type="radio"]{
+    display: none;
+}
+
+.radio-button{
+    display: block;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border-input);
+    background-color: var(--color-background-input);
+    color: var(--color-content-default);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.radio-button:hover{
+    border-color: var(--color-content-emphasis);
+    background-color: var(--form-background);
+}
+
+.radio-button:has(input:checked){
+    border-color: var(--color-content-emphasis);
+    background-color: var(--color-content-emphasis);
+    color: var(--color-content-default-inverse);
+}
+
+/* .radio-button:has(input:focus-visible){
+    outline: 3px solid var(--ns-yellow);
+    outline-offset: 2px;
+} */
+
+/* Feedback */
+
+/* Dit werkte niet goed want dan geeft hij past feedback wanneer het formulier helemaal gesubmit is.  */
+
+/* input:required:invalid:focus{ 
+  border-color: var(--color-content-error);
+}
+
+input:required:valid{
+  border-color: var(--color-content-success);
+}
+
+.radio-button:has(input:invalid){
+  border-color: var(--color-content-error);
+}
+
+.radio-button:has(input:checked){
+  border-color: var(--color-content-success);
+} */
+
+input.error{
+  border-color: var(--color-content-error);
+}
+
+input.success{
+  border-color: var(--color-content-success);
+}
+
+.error-message{
+  display: none;
+  color: var(--color-content-error);
+  font-size: 0.95em;
+
+  margin-top: 0.2em;
+}
+
+.help-text{
+  color: var(--help-text);
+  font-size: 0.8em;
+
+  margin-top: 0.2em;
 }
