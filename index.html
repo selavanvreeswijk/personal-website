@@ -1,308 +1,165 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Erfenis Formulier</title>
+        <title>Personal Website</title>
         <link href="./css/styles.css" rel="stylesheet">
-        <link rel="icon" href="./images/logo-belastingdienst.jpg"> 
+        <link rel="icon" href="./images/zee.jpg"> 
     </head>
 
-    <body>
+    <body id="top">
         <header>
-            <p>DIT IS EEN STUDIEPROJECT</p>
+            <h1 id="person-321-name"><!--Data API--></h1>
         </header>
 
         <main>
-            <section>
-                <h1>Erfenis Formulier</h1>
-                <p>Vul dit formulier in.</p>
+            <div class="static">
+                <h2>Feb 2026</h2>
+
+                <h2 class="theme-toggle">Minor Web Development</h2>
+            </div>
+
+            <div class="container">
+                <article class="folder-1"> 
+                    <h3>Stats</h3>
+                    
+                    <section>
+                        <h4>Data</h4> 
+
+                        <ul id="person-321-data"></ul> <!--Data API-->
+                    </section>
+                </article>
+
+                <article class="folder-2"> 
+                   <h3>Words</h3> 
+
+                    <section>
+                        <h4>Things that describe me</h4> 
+
+                        <ul>
+                            <li>Cycling</li>
+                            <li>Sudoku</li>
+                            <li>Writing</li>
+                            <li>Nature</li>
+                            <li>Films</li>
+                            <li>Mountains</li>
+                            <li>Eating Healthy</li>
+                            <li>Reading</li>
+                        </ul>
+                    </section>
+                </article>
+
+                <article class="folder-3"> 
+                     <h3>Interesting Facts</h3> 
+
+                    <section>
+                        <h4>Did you know?</h4> 
+
+                         <ul>
+                            <li>Mango is my favorite fruit</li>
+                            <li>Courgette is my favorite vegetable</li>
+                            <li>I love soup</li>
+                            <li>I use the word 'fantastic' a lot</li>
+                            <li>I love going to bed on time</li>
+                        </ul>
+                    </section>
+                </article>
+            </div>
+
+            <section class="about-me"> <!--Section about me met foto-->
+                <div>
+                    <h3>My name is Sela</h3>
+
+                    <p>
+                        Like many adolescents, I once had to choose what I wanted to study. With so many options, I felt overwhelmed and unsure. 
+                        So, I decided to take a few gap years to explore myself and life. You can see a part of what I discovered in the folders above and pictures that follow.
+                        During that time, one thing slowly became clear: I wanted to build websites.
+                    </p>
+
+                    <p>
+                        That led me to Communication and Multimedia Design. There, my interest became more concrete. I chose Tech and Web Development as my specialisations and started turning ideas into real, working websites. 
+                        By working on different projects, I learned how to combine structure, design, and interaction in a way that feels clear and intentional. 
+                        This website reflects who I am as a person and as a web developer: curious, detail-focused, and always learning. Within this project, I want to strengthen my understanding of JavaScript beyond the basics. Moving from simply making things work to truly understanding why they work. At the same time, I want to deepen my knowledge of CSS by improving how I structure layouts, use positioning and responsive design, and create cleaner, more consistent styling.
+                    </p>
+
+                    <p>
+                        I'm excited about the next steps in this journey and about challenging myself to grow further as a web developer.
+                    </p>
+                </div>
+
+                <img src="./images/zee.jpg" alt="Picture of author">
             </section>
 
-            <section>
-                <form>
-                    <fieldset>
-                        <legend>Persoonsgegevens overledene</legend>
+            <!--Sectie horizontale scroll -->
+            <!--Source: https://codepen.io/Sela-van-Vreeswijk/pen/GgqwRBm?editors=1000-->
 
-                        <fieldset> <!--1a-->
-                            <legend>Gegevens overledene</legend>
+            <div class="horizontal-scroll-wrapper"> 
+                <figure class="img-wrapper slower">
+                    <img src="./images/crozon-hike.jpg" alt="A Hike in Crozon, France">
+                </figure>
 
-                            <label>Voorletter(s)
-                                <input 
-                                    type="text" 
-                                    name="naam" 
-                                    pattern="[A-Za-z.]+" 
-                                    required> <!--Bron pattern: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/pattern -->
+                <figure class="img-wrapper faster">
+                    <img src="./images/london.jpg" alt="A walk in nature in London">
+                </figure>
 
-                                <p class="error-message"></p>
-                            </label>
+                <figure class="img-wrapper slower vertical">
+                    <img src="./images/guesthouse.jpg" alt="A guesthouse in Albania">
+                </figure>
 
-                            <label>Tussenvoegsel(s)
-                                <input 
-                                    type="text" 
-                                    name="naam">
-                            </label>
+                <figure class="img-wrapper slower slower-down">
+                    <img src="./images/teth.jpg" alt="A hike in Teth, Albania">
+                </figure>
 
-                            <label>Achternaam
-                                <input 
-                                    type="text" 
-                                    name="naam" 
-                                    required>
+                <figure class="img-wrapper neutral">
+                    <img src="./images/crozon2.jpg" alt="A beach in Crozon, France">
+                </figure>
 
-                                <p class="error-message"></p>                                
-                            </label>
+                <figure class="img-wrapper slower">
+                    <img src="./images/seven-sisters.jpg" alt="Picture of author at Seven Sisters, England">
+                </figure>
 
-                            <label>BSN
-                                <input 
-                                    type="text" 
-                                    pattern="\d{9}" 
-                                    maxlength="9" 
-                                    required>
+                <figure class="img-wrapper faster1">
+                    <img src="./images/cacti.jpg" alt="A cactus">
+                </figure>
 
-                                <p class="help-text">Vul 9 cijfers in, zonder spaties of punten.</p>
-                                <p class="error-message"></p>
-                            </label>
+                <figure class="img-wrapper faster1">
+                    <img src="./images/tenerife.jpg" alt="A sea and houses in Tenerife">
+                </figure>
 
-                            <label>Overlijdensdatum
-                                <input 
-                                    type="date" 
-                                    name="overlijdensdatum" 
-                                    value="yyyy-mm-dd" 
-                                    min="2024-07-16" 
-                                    max="2026-03-03" 
-                                    required> <!--Bron minimale datum: https://www.belastingdienst.nl/wps/wcm/connect/nl/erfbelasting/content/wanneer-moet-mijn-aangifte-erfbelasting-binnen-zijn-->
-                                
-                                <p class="error-message"></p>                                                          
-                            </label>
-                        </fieldset>
+                <figure class="img-wrapper slower2">
+                    <img src="./images/outfit.jpg" alt="A picture of an outfit">
+                </figure>
 
-                        <fieldset> <!--1b-->
-                            <legend>Partnerschap overledene</legend>
+                <figure class="img-wrapper neutral">
+                    <img src="./images/perzik.jpg" alt="Two peaches in a hand">
+                </figure>
 
-                            <fieldset class="radio">
-                                <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                                    
-                                <label class="radio-button">Ja
-                                    <input 
-                                        type="radio" 
-                                        value="ja" 
-                                        name="getrouwd" 
-                                        required>
-                                </label>
+                <figure class="img-wrapper slower">
+                    <img src="./images/wes-anderson.jpg" alt="A Wes Anderson exhibition">
+                </figure>
 
-                                <label class="radio-button">Nee
-                                    <input 
-                                        type="radio" 
-                                        value="nee" 
-                                        name="getrouwd" 
-                                        required>
-                                </label> <!--Als je hier op klikt klapt iets nog in-->
+                <figure class="img-wrapper slower last">
+                    <img src="./images/albanian-sun.jpg" alt="An Albanian sunset">
+                </figure>
+            </div>
 
-                                <p class="error-message"></p>                                                          
-                            </fieldset>
+            <section class="classmates">  <!--Sectie API klasgenoten-->
+                <h3>Friends I'm doing this minor with</h3>
 
-                            <fieldset class="radio"> 
-                                <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
+                <div class="classmate-item">
+                    <ul id="person-305"></ul>
 
-                                <label class="radio-button">Ja
-                                    <input 
-                                        type="radio" 
-                                        value="ja" 
-                                        name="geregistreerd-partnerschap" 
-                                        required>
-                                </label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
+                    <ul id="person-298"></ul>
 
-                                <label class="radio-button">Nee
-                                    <input 
-                                        type="radio" 
-                                        value="nee" 
-                                        name="geregistreerd-partnerschap" 
-                                        required>
-                                </label>
-
-                                <p class="error-message"></p>                                                          
-                            </fieldset>
-
-                            <fieldset class="radio">
-                                <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-
-                                <label class="radio-button" >Ja
-                                    <input 
-                                        type="radio" 
-                                        value="ja" 
-                                        name="finaal-verrekenbeding" 
-                                        required>
-                                </label> <!--Nog dat je een kopie met de aangifte mee moet sturen-->
-
-                                <label class="radio-button">Nee
-                                    <input 
-                                        type="radio" 
-                                        value="nee" 
-                                        name="finaal-verrekenbeding" 
-                                        required>
-                                </label>
-
-                                <p class="error-message"></p>                                                          
-                            </fieldset>
-                        </fieldset>
-
-                        <fieldset> <!--1c-->
-                            <legend>Kinderen overledene</legend>
-
-                            <fieldset class="radio">
-                                <legend>Had de overledene kinderen?</legend>
-
-                                <label class="radio-button">Ja
-                                    <input 
-                                        type="radio" 
-                                        value="ja" 
-                                        name="finaal-verrekenbeding" 
-                                        required>
-                                </label> 
-
-                                <label class="radio-button">Nee
-                                    <input 
-                                        type="radio" 
-                                        value="nee" 
-                                        name="finaal-verrekenbeding" 
-                                        required>
-                                </label> <!--Door naar 1d-->
-
-                                <p class="error-message"></p>                                                          
-                            </fieldset>
-
-                            <fieldset class="radio">
-                                <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
-
-                                <label class="radio-button">Ja
-                                    <input 
-                                        type="radio" 
-                                        value="ja" 
-                                        name="kind-eerder-overleden" 
-                                        required>
-                                </label> 
-
-                                <label class="radio-button">Nee
-                                    <input 
-                                        type="radio" 
-                                        value="nee" 
-                                        name="kind-eerder-overleden" 
-                                        required>
-                                </label> <!--Door naar 1d-->
-
-                                <p class="error-message"></p>                                                          
-                            </fieldset>
-
-                            <fieldset class="radio">
-                                <legend>Had dit overleden kind zelf kinderen?</legend>
-
-                                <label class="radio-button">Ja
-                                    <input 
-                                        type="radio" 
-                                        value="ja" 
-                                        name="overleden-kind-zelf-kinderen" 
-                                        required>
-                                </label> 
-
-                                <label class="radio-button">Nee
-                                    <input 
-                                        type="radio" 
-                                        value="nee" 
-                                        name="overleden-kind-zelf-kinderen" 
-                                        required>
-                                </label> <!--Door naar 1d-->
-
-                                <p class="error-message"></p>                                                          
-                            </fieldset>
-                        </fieldset>
-
-                        <fieldset> <!--1d-->
-                            <legend>Testament overledene</legend>
-
-                            <fieldset class="radio">
-                                <legend>Had de overledene een testament?</legend>
-
-                                <label class="radio-button">Ja
-                                    <input 
-                                        type="radio" 
-                                        value="ja" 
-                                        name="testament" 
-                                        required>
-                                </label> 
-
-                                <label class="radio-button">Nee
-                                    <input 
-                                        type="radio" 
-                                        value="nee" 
-                                        name="testament" 
-                                        required>
-                                </label> 
-
-                                <p class="error-message"></p>                                                          
-                            </fieldset>
-
-                            <fieldset>
-                                <legend>Protocolnummer notaris</legend>
-
-                                <input 
-                                    type="number" 
-                                    minlength="6" 
-                                    maxlength="6" 
-                                    name="protocolnummer-notaris">
-
-                                <label>Voorletter(s)
-                                    <input 
-                                        type="text" 
-                                        name="naam" 
-                                        pattern="[A-Z.]+" 
-                                        required> 
-
-                                    <p class="error-message"></p>                                                          
-                                </label>
-
-                                <label>Tussenvoegsel(s)
-                                    <input 
-                                        type="text"
-                                        name="naam">
-                                </label>
-
-                                <label>Achternaam
-                                    <input 
-                                        type="text" 
-                                        name="naam" 
-                                        required>
-
-                                    <p class="error-message"></p>                                                          
-                                </label>
-
-                                <label>Vestigingsplaats
-                                    <input 
-                                        type="text" 
-                                        name="naam" 
-                                        required>
-
-                                    <p class="error-message"></p>                                                          
-                                </label>
-
-                                <label>Datum van het testament of van de laatste wijziging
-                                    <input 
-                                        type="date" 
-                                        name="testament-laatste-wijziging"
-                                        min="2024-07-16" 
-                                        max="2026-03-03" 
-                                        required>
-
-                                    <p class="error-message"></p>                                                          
-                                </label>
-                            </fieldset>
-                        </fieldset>
-
-                        <button type="submit">Verzenden</button>
-                    </fieldset>
-                </form>
+                    <ul id="person-291"></ul>
+                </div>
             </section>
-        
-            <script src="js/script.js"></script>
+
+            <a href="#top" class="back-to-top">Back to top</a>
+
         </main>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
